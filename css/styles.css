@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'mas-bold';
-  src: url("../fonts/DINPro-Bold.eot") format("embedded-opentype"), url("../fonts/DINPro-Bold.woff") format("woff"), url("../fonts/DINPro-Bold.ttf") format("truetype"), url("../fonts/DINPro-Bold.svg#DINPro-Bold") format("svg");
+  font-family: 'mas-regular';
+  src: url("../fonts/DINPro-Regular.eot") format("embedded-opentype"), url("../fonts/DINPro-Regular.woff") format("woff"), url("../fonts/DINPro-Regular.ttf") format("truetype"), url("../fonts/DINPro-Regular.svg#DINPro-Regular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'mas-regular';
-  src: url("../fonts/DINPro-Regular.eot") format("embedded-opentype"), url("../fonts/DINPro-Regular.woff") format("woff"), url("../fonts/DINPro-Regular.ttf") format("truetype"), url("../fonts/DINPro-Regular.svg#DINPro-Regular") format("svg");
+  font-family: 'mas-bold';
+  src: url("../fonts/DINPro-Bold.eot") format("embedded-opentype"), url("../fonts/DINPro-Bold.woff") format("woff"), url("../fonts/DINPro-Bold.ttf") format("truetype"), url("../fonts/DINPro-Bold.svg#DINPro-Bold") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -102,6 +102,53 @@ table {
 
 html, body {
   color: white;
+  font-family: "mas-regular", Helvetica, Arial, sans-serif;
+}
+
+.backlight {
+  background: black;
+}
+
+strong, b {
+  font-family: "mas-bold", Helvetica, Arial, sans-serif;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
+  width: 250px;
+  float: right;
+  margin-top: 25px;
+}
+
+.content-wrapper {
+  height: 100%;
+  max-width: 1280px;
+  max-width: 96%;
+  margin: 0 auto;
+  position: relative;
+}
+.content-wrapper:before, .content-wrapper:after {
+  content: " ";
+  display: table;
+}
+.content-wrapper:after {
+  clear: both;
+}
+
+.vertical-align {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .page-nav {
@@ -111,6 +158,9 @@ html, body {
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
   position: fixed;
+  right: 2%;
+  text-align: right;
+  z-index: 2;
 }
 
 .main {
@@ -118,4 +168,21 @@ html, body {
   background-size: cover;
   height: 100vh;
   width: 100vw;
+  position: relative;
+}
+.main .main-copy {
+  max-width: 400px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.main .call-to {
+  bottom: 25px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
 }

@@ -1,3 +1,46 @@
 html, body {
 	color: white;
+	font-family:$font-regular;
+}
+
+// Text
+
+.backlight {
+	background: black;
+}
+
+strong, b {
+	font-family:$font-bold;
+}
+
+p {
+	line-height: 1.5em;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+// Content
+
+.logo {
+	width: 250px;
+	float: right;
+	margin-top: 25px;
+}
+
+.content-wrapper{
+	height: 100%;
+	max-width: 1280px;
+	max-width: 96%;
+	margin: 0 auto;
+	position: relative;
+	@include clearfix;
+}
+
+// Layout
+
+.vertical-align {
+	@include vertical-align;
 }

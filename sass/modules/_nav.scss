@@ -1,4 +1,7 @@
 .page-nav {
 	@include vertical-align;
 	position: fixed;
+	right: 2%;
+	text-align: right;
+	z-index: 2;
 }
