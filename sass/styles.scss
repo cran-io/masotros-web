@@ -3,10 +3,13 @@
 @import "fonts";
 @import "mixins";
 @import "variables";
+@import "animations";
 
 @import "base/reset";
 @import "base/base";
 
+@import "modules/header";
 @import "modules/nav";
 
-@import "pages/main";
+@import "sections/main";
+@import "sections/projects";

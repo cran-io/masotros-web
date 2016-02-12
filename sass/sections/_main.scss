@@ -6,12 +6,13 @@
 	position: relative;
 
 	.main-copy {
-		max-width: 400px;
 		@include vertical-align
 	}
 
 	.call-to {
+		font-size: map-get($font-size, big);
 		bottom: 25px;
 		@include horizontal-align;
+		@include animation(jump 1s ease-in-out 0s infinite alternate);
 	}
 }

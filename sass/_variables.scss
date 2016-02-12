@@ -2,3 +2,18 @@
 
 $font-regular :'mas-regular', Helvetica, Arial, sans-serif;
 $font-bold :'mas-bold', Helvetica, Arial, sans-serif;
+
+$font-size: (
+	small:1rem,
+	medium:1.8rem,
+	big:2.8rem,
+	bigest:3.8rem,
+);
+
+// Color
+
+$mas-color: #34aec4;
+
+// animations
+
+$timing: .3s ease-in-out;

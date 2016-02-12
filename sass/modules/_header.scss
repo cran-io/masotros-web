@@ -1,0 +1,18 @@
+header {
+	width: 100vw;
+	position:fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+
+	.logo {
+		width: 250px;
+		float: right;
+		margin-top: 25px;
+		@include transition(width $timing);
+
+		&.page-play {
+			width: 150px;
+		}
+	}
+}

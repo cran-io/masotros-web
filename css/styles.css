@@ -47,6 +47,50 @@
   content: "\e903";
 }
 
+@-moz-keyframes jump {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 15px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+@-webkit-keyframes jump {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 15px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+@-o-keyframes jump {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 15px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 15px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -101,12 +145,17 @@ table {
 }
 
 html, body {
+  background: black;
   color: white;
   font-family: "mas-regular", Helvetica, Arial, sans-serif;
 }
 
 .backlight {
   background: black;
+  display: table;
+  line-height: 1.5em;
+  padding: 0 5px;
+  margin: 4px 0;
 }
 
 strong, b {
@@ -120,12 +169,12 @@ p {
 a {
   color: white;
   text-decoration: none;
+  -moz-transition: color 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
-
-.logo {
-  width: 250px;
-  float: right;
-  margin-top: 25px;
+a:hover {
+  color: #34aec4;
 }
 
 .content-wrapper {
@@ -151,6 +200,25 @@ a {
   transform: translateY(-50%);
 }
 
+header {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+header .logo {
+  width: 250px;
+  float: right;
+  margin-top: 25px;
+  -moz-transition: width 0.3s ease-in-out;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+header .logo.page-play {
+  width: 150px;
+}
+
 .page-nav {
   position: absolute;
   top: 50%;
@@ -162,6 +230,84 @@ a {
   text-align: right;
   z-index: 2;
 }
+.page-nav p {
+  margin-top: 20px;
+  float: right;
+  display: inline-block;
+  overflow: hidden;
+  -moz-transition: width 0.3s ease-in-out, padding 0.3s ease-in-out;
+  -webkit-transition: width 0.3s ease-in-out, padding 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+.page-nav span {
+  font-size: 1.8rem;
+  float: right;
+  margin-left: 5px;
+  -moz-transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.page-nav .nav-buttons li {
+  margin: 5px 0;
+}
+.page-nav .nav-buttons li:before, .page-nav .nav-buttons li:after {
+  content: " ";
+  display: table;
+}
+.page-nav .nav-buttons li:after {
+  clear: both;
+}
+.page-nav .nav-buttons li.nav-main {
+  display: none;
+}
+.page-nav .nav-buttons li.nav-proyects p {
+  width: 80px;
+}
+.page-nav .nav-buttons li.nav-ours p {
+  width: 75px;
+}
+.page-nav .nav-buttons li.nav-contact p {
+  width: 73px;
+}
+.page-nav .nav-buttons li.selected span {
+  color: #34aec4;
+}
+.page-nav a:hover {
+  color: white;
+}
+.page-nav a:hover p {
+  color: white;
+}
+.page-nav a:hover span {
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  color: #34aec4;
+}
+.page-nav a:visited {
+  color: white;
+}
+.page-nav a:visited p {
+  color: white;
+}
+.page-nav.page-play .nav-buttons li p {
+  margin-top: 20px;
+  float: right;
+  width: 0;
+  padding: 0;
+}
+.page-nav.page-play a:hover p {
+  padding: 0 5px;
+}
+.page-nav.page-play .nav-proyects a:hover p {
+  width: 80px;
+}
+.page-nav.page-play .nav-ours a:hover p {
+  width: 75px;
+}
+.page-nav.page-play .nav-contact a:hover p {
+  width: 73px;
+}
 
 .main {
   background: url("../images/bg-main.png");
@@ -171,7 +317,6 @@ a {
   position: relative;
 }
 .main .main-copy {
-  max-width: 400px;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -179,10 +324,20 @@ a {
   transform: translateY(-50%);
 }
 .main .call-to {
+  font-size: 2.8rem;
   bottom: 25px;
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   transform: translateX(-50%);
+  -moz-animation: jump 1s ease-in-out 0s infinite alternate;
+  -webkit-animation: jump 1s ease-in-out 0s infinite alternate;
+  -o-animation: jump 1s ease-in-out 0s infinite alternate;
+  animation: jump 1s ease-in-out 0s infinite alternate;
+}
+
+.projects {
+  height: 100vh;
+  width: 100vw;
 }
