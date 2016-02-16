@@ -7,6 +7,11 @@ html, body {
 
 // Text
 
+h3 {
+	font-family: $font-bold;
+	font-size: map-get($font-size, higlight);
+}
+
 .backlight {
 	background: black;
 	display: table;

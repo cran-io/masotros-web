@@ -152,6 +152,11 @@ html, body {
   overflow-x: hidden;
 }
 
+h3 {
+  font-family: "mas-bold", Helvetica, Arial, sans-serif;
+  font-size: 1.4rem;
+}
+
 .backlight {
   background: black;
   display: table;
@@ -359,6 +364,46 @@ header .logo.page-play {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
+}
+.flexslider.carrousel .slides img {
+  -moz-transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.flexslider.carrousel .slides li {
+  cursor: pointer;
+  position: relative;
+}
+.flexslider.carrousel .slides li:hover .project-thumb-info {
+  opacity: 1;
+}
+.flexslider.carrousel .slides li:hover img {
+  opacity: .5;
+}
+.flexslider .project-thumb-info {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  padding: 15px;
+  text-transform: uppercase;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.flexslider .project-thumb-info .icon-miselanius {
+  color: white;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  font-size: 2.8rem;
+  font-weight: 400;
+}
+.flexslider .project-thumb-info p {
+  font-size: 0.9rem;
 }
 
 .us {
