@@ -149,6 +149,7 @@ html, body {
   background: black;
   color: white;
   font-family: "mas-regular", Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 .backlight {
@@ -351,10 +352,21 @@ header .logo.page-play {
 }
 
 .flexslider {
+  background: black;
   position: relative;
   border: none;
   margin: 0;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
+}
+
+.us {
+  width: 100vw;
+  height: 100vh;
+}
+
+.contact {
+  height: 100vh;
+  width: 100vw;
 }
