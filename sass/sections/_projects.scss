@@ -1,4 +1,17 @@
+@import url(../components/flexslider/flexslider.css);
+
 .projects {
 	height: 100vh;
 	width: 100vw;
+	@include clearfix;
+}
+
+// Flexslider
+
+.flexslider {
+	position: relative;
+	border: none;
+	margin: 0;
+	@include border-radius(0);
+
 }

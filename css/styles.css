@@ -1,3 +1,4 @@
+@import url(../components/flexslider/flexslider.css);
 @font-face {
   font-family: 'mas-regular';
   src: url("../fonts/DINPro-Regular.eot") format("embedded-opentype"), url("../fonts/DINPro-Regular.woff") format("woff"), url("../fonts/DINPro-Regular.ttf") format("truetype"), url("../fonts/DINPro-Regular.svg#DINPro-Regular") format("svg");
@@ -310,7 +311,7 @@ header .logo.page-play {
 }
 
 .main {
-  background: url("../images/bg-main.png");
+  background: url("../images/bg-main.jpg");
   background-size: cover;
   height: 100vh;
   width: 100vw;
@@ -340,4 +341,20 @@ header .logo.page-play {
 .projects {
   height: 100vh;
   width: 100vw;
+}
+.projects:before, .projects:after {
+  content: " ";
+  display: table;
+}
+.projects:after {
+  clear: both;
+}
+
+.flexslider {
+  position: relative;
+  border: none;
+  margin: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
