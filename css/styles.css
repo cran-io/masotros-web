@@ -1,3 +1,4 @@
+@import url(../components/flexslider/flexslider.css);
 @font-face {
   font-family: 'mas-regular';
   src: url("../fonts/DINPro-Regular.eot") format("embedded-opentype"), url("../fonts/DINPro-Regular.woff") format("woff"), url("../fonts/DINPro-Regular.ttf") format("truetype"), url("../fonts/DINPro-Regular.svg#DINPro-Regular") format("svg");
@@ -148,6 +149,12 @@ html, body {
   background: black;
   color: white;
   font-family: "mas-regular", Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+h3 {
+  font-family: "mas-bold", Helvetica, Arial, sans-serif;
+  font-size: 1.4rem;
 }
 
 .backlight {
@@ -310,7 +317,7 @@ header .logo.page-play {
 }
 
 .main {
-  background: url("../images/bg-main.png");
+  background: url("../images/bg-main.jpg");
   background-size: cover;
   height: 100vh;
   width: 100vw;
@@ -338,6 +345,73 @@ header .logo.page-play {
 }
 
 .projects {
+  height: 100vh;
+  width: 100vw;
+}
+.projects:before, .projects:after {
+  content: " ";
+  display: table;
+}
+.projects:after {
+  clear: both;
+}
+
+.flexslider {
+  background: black;
+  position: relative;
+  border: none;
+  margin: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.flexslider.carrousel .slides img {
+  -moz-transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.flexslider.carrousel .slides li {
+  cursor: pointer;
+  position: relative;
+}
+.flexslider.carrousel .slides li:hover .project-thumb-info {
+  opacity: 1;
+}
+.flexslider.carrousel .slides li:hover img {
+  opacity: .5;
+}
+.flexslider .project-thumb-info {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  padding: 15px;
+  text-transform: uppercase;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.flexslider .project-thumb-info .icon-miselanius {
+  color: white;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  font-size: 2.8rem;
+  font-weight: 400;
+}
+.flexslider .project-thumb-info p {
+  font-size: 0.9rem;
+}
+
+.us {
+  width: 100vw;
+  height: 100vh;
+}
+
+.contact {
   height: 100vh;
   width: 100vw;
 }

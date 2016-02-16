@@ -1,4 +1,71 @@
+@import url(../components/flexslider/flexslider.css);
+
 .projects {
 	height: 100vh;
 	width: 100vw;
+	@include clearfix;
+}
+
+// Flexslider
+
+.flexslider {
+	background: black;
+	position: relative;
+	border: none;
+	margin: 0;
+	@include border-radius(0);
+
+	&.carrousel {
+		
+		.slides {
+
+			img {
+				@include transition(opacity $timing);
+			}
+
+
+			li {
+				cursor: pointer;
+				position: relative;
+
+				&:hover {
+
+					.project-thumb-info {
+						opacity: 1;
+					}
+
+					img {
+						opacity: .5;
+					}
+				}	
+			}
+
+		}
+	}
+
+	.project-thumb-info {
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 100;
+		padding: 15px;
+		text-transform: uppercase;
+		@include transition(opacity $timing);
+
+		.icon-miselanius {
+			color: white;
+			position: absolute;
+			right: 15px;
+			bottom: 15px;
+			font-size: map-get($font-size, big);
+			font-weight: 400;
+		}
+
+		p {
+			font-size: map-get($font-size, smallest);
+		}
+	}
 }

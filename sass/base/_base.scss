@@ -2,9 +2,15 @@ html, body {
 	background: black;
 	color: white;
 	font-family:$font-regular;
+	overflow-x: hidden;
 }
 
 // Text
+
+h3 {
+	font-family: $font-bold;
+	font-size: map-get($font-size, higlight);
+}
 
 .backlight {
 	background: black;
