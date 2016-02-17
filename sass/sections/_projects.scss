@@ -3,6 +3,7 @@
 .projects {
 	height: 100vh;
 	width: 100vw;
+	overflow: hidden;
 	@include clearfix;
 }
 
@@ -14,6 +15,20 @@
 	border: none;
 	margin: 0;
 	@include border-radius(0);
+
+	&.screen {
+		margin-top: -115px;
+
+		li {
+			overflow:hidden;
+			height: 100vh;
+			width: 100vw;
+
+			img {
+				width: auto;
+			}
+		}
+	}
 
 	&.carrousel {
 		
@@ -30,7 +45,7 @@
 
 				&:hover {
 
-					.project-thumb-info {
+					.project-info-thumb {
 						opacity: 1;
 					}
 
@@ -43,7 +58,7 @@
 		}
 	}
 
-	.project-thumb-info {
+	.project-info-thumb {
 		opacity: 0;
 		position: absolute;
 		top: 0;
@@ -66,6 +81,96 @@
 
 		p {
 			font-size: map-get($font-size, smallest);
+		}
+	}
+}
+
+// Project Info+
+
+.project-info {
+	max-width: 555px;
+    position: absolute;
+    bottom: 90px;
+    width: 90%;
+    margin: 0 0 0 90px;
+
+    p {
+    	font-size: map-get($font-size, smallest);
+    }
+
+    .icon-miselanius {
+    	font-size: map-get($font-size, big);
+    	font-weight: bold;
+    }
+	
+	.info-box {
+		opacity: 0;
+		margin-top: 10px;
+		@include grid(2,15px,'.column');
+		@include transition(opacity $timing, margin $timing);
+
+		.box-black {
+			background: black;
+			padding: 25px;
+
+			.sub-title {
+				text-align: right;
+			}
+			
+			p {
+				margin-top: 15px;
+			}
+		}
+		
+		.box-description {
+			
+			p {
+				margin-top: 50px;
+			}
+		}
+	}
+	
+	.info-button {
+		position: absolute;
+		bottom: -40px;
+    	left: -40px;
+		cursor: pointer;
+
+		p {
+			display: inline-block;
+			margin-left: -25px;
+			@include transition(margin $timing);
+		}
+
+		.icon-more {
+			font-size: map-get($font-size, biggest);
+			@include transition(color $timing, transform $timing);
+			display: inline-block;
+		}
+
+		.open {
+
+		}
+		
+		.close {
+
+		}
+
+		&:hover {
+
+			.icon-more {
+				@include transform(rotate(90deg), translateZ(0));
+				color: $mas-color;
+			}
+			
+			p {
+				margin-left: -15px;
+			}
+
+			&+.info-box {
+				opacity: 1;
+				margin-top: 0;
+			}
 		}
 	}
 }

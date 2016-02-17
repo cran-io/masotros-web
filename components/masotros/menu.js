@@ -52,16 +52,3 @@ $(window).scroll(function(){
     tops.push(top);
   });
 });
-
-
-
-$(window).on('resize', function(){
-
-    if(window.innerWidth >= $('.screen .slides img').innerWidth()) {
-        $('.screen .slides img').css({'width':'100vw', 'height': 'auto'});
-    } 
-    if(window.innerHeight >= $('.screen .slides img').innerHeight())
-     {
-        $('.screen .slides img').css({'width':'auto', 'height': '100vh'});
-    }
-});
