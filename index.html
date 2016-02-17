@@ -241,56 +241,8 @@
 </body>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="components/masotros/menu.js"></script>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="components/flexslider/jquery.flexslider-min.js"></script>
-<script type="text/javascript">
-	$(window).load(function(){
-		$('#carousel').flexslider({
-			animation: "slide",
-			controlNav: false,
-			directionNav: true,
-			animationLoop: true,
-			slideshow: false,
-			itemWidth: 210,
-			touch: true, 
-			itemMargin: 0,
-			asNavFor: '#slider',
-		});
-
-		$('#slider').flexslider({
-			animation: "slide",
-			controlNav: false,
-			directionNav: false,
-			animationLoop: true,
-			slideshow: false,
-			touch: true, 
-			sync: "#carousel",
-			start: function(slider){
-				$('body').removeClass('loading');
-			}
-		});
-	});
-</script>
-
-<script>
-	//
-	$(window).load(function(){
-		resizeProyectImage();
-	});
-
-	$(window).on('resize', function(){
-		resizeProyectImage();
-	});
-
-	function resizeProyectImage() {
-		if(window.innerHeight >= $('.screen li img').innerHeight())
-		{
-			$('.screen li img').css({'width':'auto', 'height': '100vh'});
-		}
-		if(window.innerWidth >= $('.screen li img').innerWidth()) {
-			$('.screen li img').css({'width':'100vw', 'height': 'auto'});
-		} 
-	};
-</script>
+<script src="components/masotros/menu.js"></script>
+<script src="components/masotros/projects.sizes.js"></script>
 </html>
