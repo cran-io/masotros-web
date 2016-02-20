@@ -1,4 +1,151 @@
 .contact {
-	height: 100vh;
 	width: 100vw;
+	background: white;
+
+	h2 {
+		position: relative;
+		color: black;
+		top: 0;
+		left: 0;
+		text-align: right;
+	}
+
+	.line-first, .line-second, .line-third {
+		@include clearfix;
+	}
+
+	.contact-content-wrapper {
+		
+		li {
+			float: left;
+		}
+	}
+
+	.title {
+		width:20vw;
+		padding: 25px;
+	}
+
+	.grey-light {
+		background: $grey-light;
+		margin-left: 30vw;
+		margin-right: 20vw;
+		width: 15vw;
+		height: 20vh;
+	}
+
+	.contact-data-wrapper {
+		background: $grey-dark;
+		text-transform: uppercase;
+		width: 35vw;
+		height: 20vh;
+		position: relative;
+
+		.data {
+			position: absolute;
+			bottom:25px;
+			left: 25px;
+		}
+	}
+
+	.contact-form {
+		background: black url(../images/contact/background.png) no-repeat right top;
+		background-size: cover;
+		padding: 25px;
+		width: 65vw;
+		min-height: 40vh;
+		text-transform: uppercase;
+
+		.columns{
+			margin-top: 25px;
+			width: 75%;
+			position: relative;
+			@include clearfix;
+			@include grid(2, 5px, '.column');
+
+			input, textarea {
+				font-family: $font-regular;
+				text-transform: uppercase;
+				width: 100%;
+				padding: 10px 15px;
+				margin: 0 10px 10px 0;
+				border: none;
+				@include box-sizing(border-box);
+
+				&:focus {
+					outline: none;
+				}
+			}
+
+			textarea {
+				height: 185px;
+			    margin-bottom: 0;
+			    margin-left: 5px;
+			}
+
+			.icon-miselanius {
+				color: white;
+				font-size: map-get($font-size, biggest);
+			}
+
+			button[type="submit"] {
+				font-family: $font-bold;
+				background: black;
+				color: white;
+				position: absolute;
+				border: none;
+				bottom: 18px;
+    			right: 5px;
+				padding: 8px 15px;
+				cursor: pointer;
+				@include transition(background $timing);
+
+				&:hover {
+					background: $mas-color;
+				}
+			}
+		}
+	}
+
+	.contact-bg-left {
+		background: black url(../images/contact/01.png) no-repeat right top;
+		background-size: cover;
+		height: 40vh;
+		width: 25vw;
+	}
+
+	.contact-bg-right {
+		background: black url(../images/contact/02.png) no-repeat right top;
+		background-size: cover;
+		height: 40vh;
+		width: 25vw;
+		margin-right: 10vw	;
+	}
+
+	.contact-location-wrapper {
+		width: 25vw;
+		text-transform: uppercase;
+
+		.location {
+			padding: 25px;
+			background: $grey-dark;
+		}
+
+		.miselanius {
+			margin: 15px;
+		}
+	}
+
+	.contact-social {
+		padding: 100px 25px 25px;
+		font-size: map-get($font-size, small);
+
+		a {
+			color: black;
+
+			&:hover {
+				color: $mas-color;
+			}
+		}
+	}
 }

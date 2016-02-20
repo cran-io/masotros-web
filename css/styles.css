@@ -32,6 +32,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-facebook:before {
+  content: "\e904";
+}
+
+.icon-twitter:before {
+  content: "\e905";
+}
+
+.icon-vimeo:before {
+  content: "\e906";
+}
+
 .icon-cross:before {
   content: "\e900";
 }
@@ -150,6 +162,18 @@ html, body {
   color: white;
   font-family: "mas-regular", Helvetica, Arial, sans-serif;
   overflow-x: hidden;
+  line-height: 1.5em;
+}
+
+h2 {
+  font-size: 2.8rem;
+  font-family: "mas-bold", Helvetica, Arial, sans-serif;
+  line-height: 1em;
+  position: absolute;
+  z-index: 20;
+  top: 60px;
+  left: 60px;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -189,12 +213,39 @@ a:hover {
   color: #34aec4;
 }
 
+.text-black {
+  color: black;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-color {
+  color: #34aec4;
+}
+
+.left {
+  float: left;
+  display: block;
+}
+
+.right {
+  float: right;
+  display: block;
+}
+
+section {
+  position: relative;
+}
+
 .content-wrapper {
   height: 100%;
   max-width: 1280px;
   max-width: 96%;
   margin: 0 auto;
   position: relative;
+  clear: both;
 }
 .content-wrapper:before, .content-wrapper:after {
   content: " ";
@@ -261,6 +312,7 @@ header .logo.page-play {
 }
 .page-nav .nav-buttons li {
   margin: 5px 0;
+  clear: both;
 }
 .page-nav .nav-buttons li:before, .page-nav .nav-buttons li:after {
   content: " ";
@@ -353,6 +405,7 @@ header .logo.page-play {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  clear: both;
 }
 .projects:before, .projects:after {
   content: " ";
@@ -440,7 +493,6 @@ header .logo.page-play {
 .project-info .info-box {
   opacity: 0;
   margin-top: 10px;
-  width: auto;
   margin-right: -15px;
   -moz-transition: opacity 0.3s ease-in-out, margin 0.3s ease-in-out;
   -webkit-transition: opacity 0.3s ease-in-out, margin 0.3s ease-in-out;
@@ -501,10 +553,287 @@ header .logo.page-play {
 
 .us {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  background: white;
+  position: relative;
+  clear: both;
+}
+.us:before, .us:after {
+  content: " ";
+  display: table;
+}
+.us:after {
+  clear: both;
+}
+.us .title {
+  background: black;
+  padding: 25px;
+}
+.us .title h2 {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  width: 100%;
+  margin-top: 25px;
+}
+.us .column {
+  float: left;
+}
+.us .column li.ornela {
+  background: transparent url(../images/us/01.png) no-repeat right top;
+  background-size: cover;
+}
+.us .column li.agustin {
+  background: transparent url(../images/us/02.png) no-repeat center top;
+  background-size: cover;
+}
+.us .column li.agustin .info-person {
+  min-height: 360px;
+}
+.us .column li.alan {
+  background: transparent url(../images/us/03.png) no-repeat center top;
+  background-size: cover;
+}
+.us .column li.martin {
+  background: transparent url(../images/us/04.png) no-repeat right top;
+  background-size: cover;
+}
+.us .column li.nehuel {
+  background: transparent url(../images/us/05.png) no-repeat left top;
+  background-size: cover;
+}
+.us .column li.belen {
+  background: transparent url(../images/us/06.png) no-repeat right top;
+  background-size: cover;
+}
+.us .column li.belen .info-person {
+  min-height: 310px;
+}
+.us .column li.julian {
+  background: transparent url(../images/us/07.png) no-repeat center center;
+  background-size: cover;
+}
+.us .column li.pre-julian {
+  min-height: 250px;
+}
+.us .column li.white {
+  display: none;
+  height: 138px;
+}
+@media (min-width: 768px) {
+  .us .column li.white {
+    display: block;
+  }
+}
+.us .column li.grey-light {
+  display: none;
+  height: 138px;
+  background: #e7e6e7;
+}
+@media (min-width: 768px) {
+  .us .column li.grey-light {
+    display: block;
+  }
+}
+.us .column li.grey-dark {
+  display: none;
+  height: 160px;
+  background: #333132;
+}
+@media (min-width: 768px) {
+  .us .column li.grey-dark {
+    display: block;
+  }
+}
+.us .info-person {
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 25px;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.us .info-person .person-description {
+  font-size: 0.8rem;
+  margin-top: 15px;
+}
+.us .info-person:hover {
+  opacity: 1;
+}
+.us .us-inovation {
+  padding: 25px;
+  font-size: 1.8rem;
+}
+.us .us-description {
+  padding: 100px 25px;
+  color: black;
+  bottom: 50px;
+  right: 50px;
+  width: 30vw;
+}
+.us .first {
+  width: 20vw;
+}
+.us .second {
+  width: 25vw;
+}
+.us .thrird {
+  width: 20vw;
+}
+.us .fourth {
+  width: 20vw;
+}
+.us .fifth {
+  width: 15vw;
 }
 
 .contact {
-  height: 100vh;
   width: 100vw;
+  background: white;
+}
+.contact h2 {
+  position: relative;
+  color: black;
+  top: 0;
+  left: 0;
+  text-align: right;
+}
+.contact .line-first, .contact .line-second, .contact .line-third {
+  clear: both;
+}
+.contact .line-first:before, .contact .line-first:after, .contact .line-second:before, .contact .line-second:after, .contact .line-third:before, .contact .line-third:after {
+  content: " ";
+  display: table;
+}
+.contact .line-first:after, .contact .line-second:after, .contact .line-third:after {
+  clear: both;
+}
+.contact .contact-content-wrapper li {
+  float: left;
+}
+.contact .title {
+  width: 20vw;
+  padding: 25px;
+}
+.contact .grey-light {
+  background: #e7e6e7;
+  margin-left: 30vw;
+  margin-right: 20vw;
+  width: 15vw;
+  height: 20vh;
+}
+.contact .contact-data-wrapper {
+  background: #333132;
+  text-transform: uppercase;
+  width: 35vw;
+  height: 20vh;
+  position: relative;
+}
+.contact .contact-data-wrapper .data {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+}
+.contact .contact-form {
+  background: black url(../images/contact/background.png) no-repeat right top;
+  background-size: cover;
+  padding: 25px;
+  width: 65vw;
+  min-height: 40vh;
+  text-transform: uppercase;
+}
+.contact .contact-form .columns {
+  margin-top: 25px;
+  width: 75%;
+  position: relative;
+  clear: both;
+  margin-right: -5px;
+}
+.contact .contact-form .columns:before, .contact .contact-form .columns:after {
+  content: " ";
+  display: table;
+}
+.contact .contact-form .columns:after {
+  clear: both;
+}
+.contact .contact-form .columns .column {
+  float: left;
+  width: 50%;
+  padding-left: 5px;
+  background-clip: content-box;
+}
+.contact .contact-form .columns input, .contact .contact-form .columns textarea {
+  font-family: "mas-regular", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 10px 15px;
+  margin: 0 10px 10px 0;
+  border: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.contact .contact-form .columns input:focus, .contact .contact-form .columns textarea:focus {
+  outline: none;
+}
+.contact .contact-form .columns textarea {
+  height: 185px;
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+.contact .contact-form .columns .icon-miselanius {
+  color: white;
+  font-size: 3.8rem;
+}
+.contact .contact-form .columns button[type="submit"] {
+  font-family: "mas-bold", Helvetica, Arial, sans-serif;
+  background: black;
+  color: white;
+  position: absolute;
+  border: none;
+  bottom: 18px;
+  right: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  -moz-transition: background 0.3s ease-in-out;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+.contact .contact-form .columns button[type="submit"]:hover {
+  background: #34aec4;
+}
+.contact .contact-bg-left {
+  background: black url(../images/contact/01.png) no-repeat right top;
+  background-size: cover;
+  height: 40vh;
+  width: 25vw;
+}
+.contact .contact-bg-right {
+  background: black url(../images/contact/02.png) no-repeat right top;
+  background-size: cover;
+  height: 40vh;
+  width: 25vw;
+  margin-right: 10vw;
+}
+.contact .contact-location-wrapper {
+  width: 25vw;
+  text-transform: uppercase;
+}
+.contact .contact-location-wrapper .location {
+  padding: 25px;
+  background: #333132;
+}
+.contact .contact-location-wrapper .miselanius {
+  margin: 15px;
+}
+.contact .contact-social {
+  padding: 100px 25px 25px;
+  font-size: 1rem;
+}
+.contact .contact-social a {
+  color: black;
+}
+.contact .contact-social a:hover {
+  color: #34aec4;
 }

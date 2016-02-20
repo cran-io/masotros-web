@@ -40,6 +40,15 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-facebook:before {
+    content: "\e904";
+}
+.icon-twitter:before {
+    content: "\e905";
+}
+.icon-vimeo:before {
+    content: "\e906";
+}
 .icon-cross:before {
     content: "\e900";
 }
@@ -52,4 +61,5 @@
 .icon-miselanius:before {
     content: "\e903";
 }
+
 

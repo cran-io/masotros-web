@@ -1,4 +1,154 @@
 .us {
 	width: 100vw;
-	height: 100vh;
+	min-height:100vh;
+	background: white;
+	position: relative;
+	@include clearfix;
+
+	.title {
+		background: black;
+		padding: 25px;
+	
+		h2 {
+			position: relative;
+			left: 0;
+			top: 0;
+			display: inline-block;
+		    width: 100%;
+		    margin-top: 25px;
+		}
+	}
+
+	.column {
+		float: left;
+
+		li {
+			&.ornela {
+    			background: transparent url(../images/us/01.png) no-repeat right top;
+				background-size: cover;
+			}
+
+			&.agustin {
+    			background: transparent url(../images/us/02.png) no-repeat center top;
+				background-size: cover;
+
+				.info-person {
+					min-height: 360px;
+				}
+			}
+
+			&.alan {
+				background: transparent url(../images/us/03.png) no-repeat center top;
+				background-size: cover;
+			}
+
+			&.martin {
+				background: transparent url(../images/us/04.png) no-repeat right top;
+				background-size: cover;
+			}
+
+			&.nehuel {
+				background: transparent url(../images/us/05.png) no-repeat left top;
+				background-size: cover;
+			}
+
+			&.belen {
+				background: transparent url(../images/us/06.png) no-repeat right top;
+				background-size: cover;
+
+				.info-person {
+					min-height: 310px;
+				}
+			}
+
+			&.julian {
+				background: transparent url(../images/us/07.png) no-repeat center center;
+				background-size: cover;
+			}
+
+			&.pre-julian {
+				min-height: 250px;
+			}
+
+			&.white{
+				display: none;
+    			height: 138px;
+
+    			@include breakpoint(tablet) {
+					display: block;
+    			}
+			}
+
+			&.grey-light {
+				display: none;
+    			height: 138px;
+    			background: $grey-light;
+
+    			@include breakpoint(tablet) {
+					display: block;
+    			}
+			}
+
+			&.grey-dark {
+				display: none;
+    			height: 160px;
+    			background: $grey-dark;
+
+    			@include breakpoint(tablet) {
+					display: block;
+    			}
+			}
+		}
+	}
+
+	.info-person {
+		opacity: 0;
+		background: rgba(black, .7);
+		padding: 25px;
+		@include transition(opacity $timing);
+		
+		.person-description {
+			font-size: map-get($font-size, smallest);
+			margin-top: 15px;
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	.us-inovation {
+		padding: 25px;
+		font-size: map-get($font-size, medium);
+	}
+
+	.us-description {
+		padding: 100px 25px;
+		color: black;
+		bottom: 50px;
+		right: 50px;
+		width: 30vw;
+	}
+
+	// Columns
+
+	.first {
+		width:20vw;
+	}
+
+	.second {
+		width:25vw; 
+	}
+
+	.thrird {
+		width:20vw; 
+	}
+
+	.fourth {
+		width:20vw; 
+	}
+
+	.fifth {
+		width:15vw; 
+	}
 }

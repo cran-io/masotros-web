@@ -3,9 +3,21 @@ html, body {
 	color: white;
 	font-family:$font-regular;
 	overflow-x: hidden;
+	line-height: 1.5em;
 }
 
 // Text
+
+h2 {
+	font-size: map-get($font-size, big);
+	font-family: $font-bold;
+	line-height: 1em;
+	position: absolute;
+	z-index:20;
+	top:60px;
+	left: 60px;
+	text-transform: uppercase;
+}
 
 h3 {
 	font-family: $font-bold;
@@ -44,7 +56,33 @@ a {
 	}
 }
 
+.text-black {
+	color: black;
+}
+
+.text-white {
+	color: white;
+}
+
+.text-color {
+	color: $mas-color;
+}
+
+.left {
+	float:left;
+	display: block;
+}
+
+.right {
+	float:right;
+	display: block;
+}
+
 // Content
+
+section {
+    position: relative;
+}
 
 .content-wrapper{
 	height: 100%;

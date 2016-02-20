@@ -22,6 +22,7 @@
 	&:after {
 		clear: both;
 	}
+	clear: both;
 }
 
 @mixin vertical-align {
@@ -50,25 +51,21 @@
 }
 
 @mixin breakpoint ($point, $value:0) {
-	@if $point == "small" {
-		@media (min-width:320px) { @content; }
-	}
-
-	@else if $point == "medium" {
+	
+	@if $point == "tablet" {
 		@media (min-width:768px) { @content; }
 	}
 
-	@else if $point == "large" {
+	@else if $point == "desktop" {
 		@media (min-width:1280px) { @content; }
 	}
 
 	@else {
-		@meadia ($point == $value) { @content }
+		@media ($point == $value) { @content }
 	}
 }
 
 @mixin grid ($cols, $gutter:0, $childs: ".item") {
-	width: auto;
 	margin-right: -$gutter;
 
 	#{$childs} {
