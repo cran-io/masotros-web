@@ -29,8 +29,7 @@ $("#contactForm").on('submit', function(e) {
 							'type': 'to'
 						}
 					],
-					'Teléfono: ' +$('#formPhone').val() + "<br>" +
-					'Mensaje: ' + $('#formMessage').val()
+					"Teléfono: " + $('#formPhone').val() + "<br>" + "Mensaje: " + $('#formMessage').val()
 				}
 			},
 			success: function(){

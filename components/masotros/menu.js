@@ -31,7 +31,6 @@ for(var i = 0; i < navLink.length; i++) {
 $(window).scroll(function(){
   var scrollTop = $(window).scrollTop();
   var tops = [];
-
   if(scrollTop > 0) {
     $('.logo').addClass('page-play');
     $('.page-nav').addClass('page-play');
@@ -45,9 +44,14 @@ $(window).scroll(function(){
     var top = $(this).position().top -90;
     if(scrollTop > top) {
       var id = $(this).attr('id');
-      
+      $('.page-wrapper').removeClass('selected');
+      $('a[href="#'+id+'"]').parent().addClass('selected');
+
       $('.selected').removeClass('selected');
       $('a[href="#'+id+'"]').parent().addClass('selected');
+
+      $('body').removeClass();
+      $('body').addClass("page-"+id);
     }
     tops.push(top);
   });

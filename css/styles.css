@@ -373,6 +373,10 @@ header .logo.page-play {
   width: 73px;
 }
 
+.page-us .page-nav a span, .page-contact .page-nav a span {
+  color: black;
+}
+
 .main {
   background: url("../images/bg-main.jpg");
   background-size: cover;
