@@ -200,6 +200,20 @@ strong, b {
 
 p {
   line-height: 1.5em;
+  font-size: 0.6rem;
+}
+@media (min-width: 768px) {
+  p {
+    font-size: 1rem;
+  }
+}
+p .mobile-phagraf {
+  display: block;
+}
+@media (min-width: 768px) {
+  p .mobile-phagraf {
+    display: none;
+  }
 }
 
 a {
@@ -264,22 +278,40 @@ section {
 }
 
 header {
+  background: rgba(0, 0, 0, 0.6);
   width: 100vw;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 2;
 }
+@media (min-width: 768px) {
+  header {
+    position: fixed;
+    background: transparent;
+  }
+}
 header .logo {
-  width: 250px;
-  float: right;
-  margin-top: 25px;
+  width: 165px;
+  float: none;
+  margin: 15px auto 0;
+  text-align: center;
   -moz-transition: width 0.3s ease-in-out;
   -webkit-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
 }
-header .logo.page-play {
-  width: 150px;
+header .logo .mobile-phagraf {
+  margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+  header .logo {
+    width: 250px;
+    float: right;
+    margin: 25px 0 0 0;
+  }
+  header .logo.page-play {
+    width: 150px;
+  }
 }
 
 .page-nav {
@@ -292,6 +324,12 @@ header .logo.page-play {
   right: 2%;
   text-align: right;
   z-index: 2;
+  display: none;
+}
+@media (min-width: 768px) {
+  .page-nav {
+    display: block;
+  }
 }
 .page-nav p {
   margin-top: 20px;
@@ -390,10 +428,45 @@ header .logo.page-play {
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
+  top: 165px;
+  margin-left: 10px;
+}
+@media (min-width: 768px) {
+  .main .main-copy {
+    top: 50%;
+    margin-left: 0px;
+  }
+}
+.main .mobile-miselanius {
+  position: absolute;
+  color: white;
+  z-index: 10;
+  font-size: 110px;
+  display: block;
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+@media (min-width: 768px) {
+  .main .mobile-miselanius {
+    display: none;
+  }
+}
+.main .mobile-cross {
+  width: 40px;
+  display: block;
+  margin-top: 10px;
+}
+@media (min-width: 768px) {
+  .main .mobile-cross {
+    display: none;
+  }
 }
 .main .call-to {
   font-size: 2.8rem;
   bottom: 25px;
+  text-align: center;
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -403,6 +476,14 @@ header .logo.page-play {
   -webkit-animation: jump 1s ease-in-out 0s infinite alternate;
   -o-animation: jump 1s ease-in-out 0s infinite alternate;
   animation: jump 1s ease-in-out 0s infinite alternate;
+}
+.main .call-to .backlight {
+  display: block;
+}
+@media (min-width: 768px) {
+  .main .call-to .backlight {
+    display: none;
+  }
 }
 
 .projects {

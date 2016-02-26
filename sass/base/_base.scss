@@ -44,6 +44,19 @@ strong, b {
 
 p {
 	line-height: 1.5em;
+	font-size: 0.6rem;
+
+	@include breakpoint(tablet) {
+		font-size: 1rem;
+	}
+
+	.mobile-phagraf {
+		display: block;
+
+		@include breakpoint(tablet) {
+			display: none;
+		}
+	}
 }
 
 a {

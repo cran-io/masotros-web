@@ -4,6 +4,11 @@
 	right: 2%;
 	text-align: right;
 	z-index: 2;
+	display: none;
+
+	@include breakpoint(tablet) {
+		display: block;
+	}
 
 	p {
 		margin-top: 20px;

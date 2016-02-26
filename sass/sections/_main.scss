@@ -6,13 +6,53 @@
 	position: relative;
 
 	.main-copy {
-		@include vertical-align
+		@include vertical-align;
+		top: 165px;
+		margin-left:10px;
+
+		@include breakpoint(tablet) {
+			top: 50%;
+			margin-left:0px;
+		}
+	}
+
+	.mobile-miselanius {
+	    position: absolute;
+	    color: white;
+	    z-index: 10;
+	    font-size: 110px;
+		display: block;
+	    @include transform(rotate(90deg));
+
+
+		@include breakpoint(tablet) {
+			display: none;
+		}
+	}
+
+	.mobile-cross {
+		width: 40px;
+		display: block;
+		margin-top:10px;
+		
+		@include breakpoint(tablet) {
+			display: none;
+		}
 	}
 
 	.call-to {
 		font-size: map-get($font-size, big);
 		bottom: 25px;
+		text-align: center;
 		@include horizontal-align;
 		@include animation(jump 1s ease-in-out 0s infinite alternate);
+		
+		.backlight {
+			display: block;
+			
+			@include breakpoint(tablet) {
+				display: none;
+			}	
+		}
 	}
 }

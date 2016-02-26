@@ -1,18 +1,35 @@
 header {
+	background: rgba(black, .6);
 	width: 100vw;
-	position:fixed;
+	position:absolute;
 	top: 0;
 	left: 0;
 	z-index: 2;
 
+	@include breakpoint(tablet) {
+		position:fixed;
+		background: transparent;
+	}
+
 	.logo {
-		width: 250px;
-		float: right;
-		margin-top: 25px;
+		width: 165px;
+		float: none;
+		margin: 15px auto 0;
+		text-align: center;
 		@include transition(width $timing);
 
-		&.page-play {
-			width: 150px;
+		.mobile-phagraf {
+			margin-bottom: 15px;
+		}
+
+		@include breakpoint(tablet) {
+			width: 250px;
+			float: right;
+			margin: 25px 0 0 0;
+
+			&.page-play {
+				width: 150px;
+			}	
 		}
 	}
 }
