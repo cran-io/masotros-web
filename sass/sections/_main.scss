@@ -34,6 +34,8 @@
 		width: 40px;
 		display: block;
 		margin-top:10px;
+		font-size: 32px;
+	    @include transform(rotate(45deg));
 		
 		@include breakpoint(tablet) {
 			display: none;

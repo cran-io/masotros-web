@@ -457,6 +457,11 @@ header .logo .mobile-phagraf {
   width: 40px;
   display: block;
   margin-top: 10px;
+  font-size: 32px;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 @media (min-width: 768px) {
   .main .mobile-cross {
