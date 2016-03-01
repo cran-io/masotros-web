@@ -17,7 +17,7 @@
 	@include border-radius(0);
 
 	&.screen {
-		margin-top: -115px;
+		margin-top: -138px;
 
 		li {
 			overflow:hidden;
@@ -47,6 +47,11 @@
 
 					.project-info-thumb {
 						opacity: 1;
+						display: none;
+
+						@include breakpoint(tablet) {
+							display: block;
+						}
 					}
 
 					img {
@@ -85,6 +90,23 @@
 	}
 }
 
+.flex-direction-nav {
+	
+	a {
+
+		&:before {
+    		font-size: 22px;
+			margin-top: 10px;
+    		color: white;
+			text-shadow: none;
+
+			@include breakpoint(tablet) {
+				font-size: 40px;
+			}
+		}
+	}
+}
+
 // Project Info+
 
 .project-info {
@@ -104,26 +126,50 @@
     }
 	
 	.info-box {
-		opacity: 0;
+		opacity: 1;
 		margin-top: 10px;
 		@include grid(2,15px,'.column');
 		@include transition(opacity $timing, margin $timing);
+		
+		@include breakpoint(tablet) {
+			opacity: 0;
+		}
 
 		.box-black {
 			background: black;
-			padding: 25px;
+			padding: 18px;
+			width: 36%;
+
+			@include breakpoint(tablet) {
+				padding: 25px;
+				width:auto;
+			}
 
 			.sub-title {
-				text-align: right;
+				text-align: left;
+
+				@include breakpoint(tablet) {
+					text-align: right;
+				}
 			}
 			
 			p {
 				margin-top: 15px;
+				display: none;
+
+				@include breakpoint(tablet) {
+					display: inline-block;
+				}
 			}
 		}
 		
 		.box-description {
+			display: none;
 			
+			@include breakpoint(tablet) {
+				display: block;
+			}
+
 			p {
 				margin-top: 50px;
 			}
@@ -132,14 +178,26 @@
 	
 	.info-button {
 		position: absolute;
-		bottom: -40px;
-    	left: -40px;
+		bottom: -60px;
+    	left: -60px;
 		cursor: pointer;
+		pointer-events: none;
+
+		@include breakpoint(tablet) {
+			pointer-events: auto;
+			bottom: -40px;
+	    	left: -40px;
+		}
 
 		p {
 			display: inline-block;
 			margin-left: -25px;
 			@include transition(margin $timing);
+			display: none;
+
+			@include breakpoint(tablet) {
+				display: inline;
+			}
 		}
 
 		.icon-more {

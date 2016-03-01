@@ -166,21 +166,33 @@ html, body {
 }
 
 h2 {
-  font-size: 2.8rem;
+  font-size: 1.8rem;
   font-family: "mas-bold", Helvetica, Arial, sans-serif;
   line-height: 1em;
   position: absolute;
   z-index: 20;
-  top: 60px;
-  left: 60px;
+  top: 30px;
+  left: 30px;
   text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 2.8rem;
+    top: 60px;
+    left: 60px;
+  }
 }
 
 h3 {
   font-family: "mas-bold", Helvetica, Arial, sans-serif;
-  font-size: 1.4rem;
+  font-size: 1rem;
   text-transform: uppercase;
   line-height: 1.5em;
+}
+@media (min-width: 768px) {
+  h3 {
+    font-size: 1.4rem;
+  }
 }
 h3.sub-title {
   font-family: "mas-regular", Helvetica, Arial, sans-serif;
@@ -207,11 +219,11 @@ p {
     font-size: 1rem;
   }
 }
-p .mobile-phagraf {
+p.mobile-phagraf {
   display: block;
 }
 @media (min-width: 768px) {
-  p .mobile-phagraf {
+  p.mobile-phagraf {
     display: none;
   }
 }
@@ -515,7 +527,7 @@ header .logo .mobile-phagraf {
   border-radius: 0;
 }
 .flexslider.screen {
-  margin-top: -115px;
+  margin-top: -138px;
 }
 .flexslider.screen li {
   overflow: hidden;
@@ -536,6 +548,12 @@ header .logo .mobile-phagraf {
 }
 .flexslider.carrousel .slides li:hover .project-info-thumb {
   opacity: 1;
+  display: none;
+}
+@media (min-width: 768px) {
+  .flexslider.carrousel .slides li:hover .project-info-thumb {
+    display: block;
+  }
 }
 .flexslider.carrousel .slides li:hover img {
   opacity: .5;
@@ -566,6 +584,18 @@ header .logo .mobile-phagraf {
   font-size: 0.8rem;
 }
 
+.flex-direction-nav a:before {
+  font-size: 22px;
+  margin-top: 10px;
+  color: white;
+  text-shadow: none;
+}
+@media (min-width: 768px) {
+  .flex-direction-nav a:before {
+    font-size: 40px;
+  }
+}
+
 .project-info {
   max-width: 555px;
   position: absolute;
@@ -581,7 +611,7 @@ header .logo .mobile-phagraf {
   font-weight: bold;
 }
 .project-info .info-box {
-  opacity: 0;
+  opacity: 1;
   margin-top: 10px;
   margin-right: -15px;
   -moz-transition: opacity 0.3s ease-in-out, margin 0.3s ease-in-out;
@@ -594,24 +624,63 @@ header .logo .mobile-phagraf {
   padding-left: 15px;
   background-clip: content-box;
 }
+@media (min-width: 768px) {
+  .project-info .info-box {
+    opacity: 0;
+  }
+}
 .project-info .info-box .box-black {
   background: black;
-  padding: 25px;
+  padding: 18px;
+  width: 36%;
+}
+@media (min-width: 768px) {
+  .project-info .info-box .box-black {
+    padding: 25px;
+    width: auto;
+  }
 }
 .project-info .info-box .box-black .sub-title {
-  text-align: right;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .project-info .info-box .box-black .sub-title {
+    text-align: right;
+  }
 }
 .project-info .info-box .box-black p {
   margin-top: 15px;
+  display: none;
+}
+@media (min-width: 768px) {
+  .project-info .info-box .box-black p {
+    display: inline-block;
+  }
+}
+.project-info .info-box .box-description {
+  display: none;
+}
+@media (min-width: 768px) {
+  .project-info .info-box .box-description {
+    display: block;
+  }
 }
 .project-info .info-box .box-description p {
   margin-top: 50px;
 }
 .project-info .info-button {
   position: absolute;
-  bottom: -40px;
-  left: -40px;
+  bottom: -60px;
+  left: -60px;
   cursor: pointer;
+  pointer-events: none;
+}
+@media (min-width: 768px) {
+  .project-info .info-button {
+    pointer-events: auto;
+    bottom: -40px;
+    left: -40px;
+  }
 }
 .project-info .info-button p {
   display: inline-block;
@@ -619,6 +688,12 @@ header .logo .mobile-phagraf {
   -moz-transition: margin 0.3s ease-in-out;
   -webkit-transition: margin 0.3s ease-in-out;
   transition: margin 0.3s ease-in-out;
+  display: none;
+}
+@media (min-width: 768px) {
+  .project-info .info-button p {
+    display: inline;
+  }
 }
 .project-info .info-button .icon-more {
   font-size: 3.8rem;

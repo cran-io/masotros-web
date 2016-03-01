@@ -9,21 +9,32 @@ html, body {
 // Text
 
 h2 {
-	font-size: map-get($font-size, big);
+	font-size: map-get($font-size, medium);
 	font-family: $font-bold;
 	line-height: 1em;
 	position: absolute;
 	z-index:20;
-	top:60px;
-	left: 60px;
+	top:30px;
+	left: 30px;
 	text-transform: uppercase;
+
+	@include breakpoint(tablet) {	
+		font-size: map-get($font-size, big);
+		top:60px;
+		left: 60px;	
+	}
 }
 
 h3 {
 	font-family: $font-bold;
-	font-size: map-get($font-size, higlight);
+	font-size: map-get($font-size, small);
 	text-transform: uppercase;
 	line-height: 1.5em;
+
+
+	@include breakpoint(tablet) {
+		font-size: map-get($font-size, higlight);
+	}
 
 	&.sub-title {
 		font-family: $font-regular;
@@ -50,7 +61,7 @@ p {
 		font-size: 1rem;
 	}
 
-	.mobile-phagraf {
+	&.mobile-phagraf {
 		display: block;
 
 		@include breakpoint(tablet) {
