@@ -624,9 +624,14 @@ header .logo .mobile-phagraf {
 }
 .project-info .info-box .column {
   float: left;
-  width: 50%;
   padding-left: 15px;
+  width: 100%;
   background-clip: content-box;
+}
+@media (min-width: 768px) {
+  .project-info .info-box .column {
+    width: 50%;
+  }
 }
 @media (min-width: 768px) {
   .project-info .info-box {
@@ -734,11 +739,17 @@ header .logo .mobile-phagraf {
 .us:after {
   clear: both;
 }
-.us .title {
+.us .us-title-desktop {
   background: black;
   padding: 25px;
+  display: none;
 }
-.us .title h2 {
+@media (min-width: 768px) {
+  .us .us-title-desktop {
+    display: block;
+  }
+}
+.us .us-title-desktop h2 {
   position: relative;
   left: 0;
   top: 0;
@@ -747,71 +758,112 @@ header .logo .mobile-phagraf {
   margin-top: 25px;
 }
 .us .column {
-  float: left;
+  float: none;
 }
-.us .column li.ornela {
+@media (min-width: 768px) {
+  .us .column {
+    float: left;
+  }
+}
+.us .column ul {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .us .column ul.first {
+    width: 20vw;
+  }
+}
+@media (min-width: 768px) {
+  .us .column ul.second {
+    width: 25vw;
+  }
+}
+@media (min-width: 768px) {
+  .us .column ul.thrird {
+    width: 20vw;
+  }
+}
+@media (min-width: 768px) {
+  .us .column ul.fourth {
+    width: 20vw;
+  }
+}
+@media (min-width: 768px) {
+  .us .column ul.fifth {
+    width: 15vw;
+  }
+}
+.us .column ul li {
+  min-height: 50vh;
+}
+@media (min-width: 768px) {
+  .us .column ul li {
+    min-height: auto;
+  }
+}
+.us .column ul li.ornela {
   background: transparent url(../images/us/01.png) no-repeat right top;
   background-size: cover;
 }
-.us .column li.agustin {
+.us .column ul li.agustin {
   background: transparent url(../images/us/02.png) no-repeat center top;
   background-size: cover;
 }
-.us .column li.agustin .info-person {
+.us .column ul li.agustin .info-person {
   min-height: 360px;
 }
-.us .column li.alan {
+.us .column ul li.alan {
   background: transparent url(../images/us/03.png) no-repeat center top;
   background-size: cover;
 }
-.us .column li.martin {
+.us .column ul li.martin {
   background: transparent url(../images/us/04.png) no-repeat right top;
   background-size: cover;
 }
-.us .column li.nehuel {
+.us .column ul li.nehuel {
   background: transparent url(../images/us/05.png) no-repeat left top;
   background-size: cover;
 }
-.us .column li.belen {
+.us .column ul li.belen {
   background: transparent url(../images/us/06.png) no-repeat right top;
   background-size: cover;
 }
-.us .column li.belen .info-person {
+.us .column ul li.belen .info-person {
   min-height: 310px;
 }
-.us .column li.julian {
+.us .column ul li.julian {
   background: transparent url(../images/us/07.png) no-repeat center center;
   background-size: cover;
 }
-.us .column li.pre-julian {
+.us .column ul li.pre-julian {
   min-height: 250px;
 }
-.us .column li.white {
+.us .column ul li.white {
   display: none;
   height: 138px;
 }
 @media (min-width: 768px) {
-  .us .column li.white {
+  .us .column ul li.white {
     display: block;
   }
 }
-.us .column li.grey-light {
+.us .column ul li.grey-light {
   display: none;
   height: 138px;
   background: #e7e6e7;
 }
 @media (min-width: 768px) {
-  .us .column li.grey-light {
+  .us .column ul li.grey-light {
     display: block;
   }
 }
-.us .column li.grey-dark {
+.us .column ul li.grey-dark {
   display: none;
   height: 160px;
   background: #333132;
 }
 @media (min-width: 768px) {
-  .us .column li.grey-dark {
+  .us .column ul li.grey-dark {
     display: block;
   }
 }
@@ -841,20 +893,14 @@ header .logo .mobile-phagraf {
   right: 50px;
   width: 30vw;
 }
-.us .first {
-  width: 20vw;
+
+.us-copy, .white {
+  display: none;
 }
-.us .second {
-  width: 25vw;
-}
-.us .thrird {
-  width: 20vw;
-}
-.us .fourth {
-  width: 20vw;
-}
-.us .fifth {
-  width: 15vw;
+@media (min-width: 768px) {
+  .us-copy, .white {
+    display: block;
+  }
 }
 
 .contact {
@@ -931,9 +977,14 @@ header .logo .mobile-phagraf {
 }
 .contact .contact-form .columns .column {
   float: left;
-  width: 50%;
   padding-left: 5px;
+  width: 100%;
   background-clip: content-box;
+}
+@media (min-width: 768px) {
+  .contact .contact-form .columns .column {
+    width: 50%;
+  }
 }
 .contact .contact-form .columns input, .contact .contact-form .columns textarea {
   font-family: "mas-regular", Helvetica, Arial, sans-serif;

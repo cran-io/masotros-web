@@ -70,9 +70,13 @@
 
 	#{$childs} {
 		float: left;
-		width: (100%/$cols);
 		padding-left: $gutter;
+		width: 100%;
 		background-clip: content-box;
+
+		@include breakpoint(tablet) {
+			width: (100%/$cols);
+		}
 	}
 }
 

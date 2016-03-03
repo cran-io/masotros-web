@@ -5,9 +5,14 @@
 	position: relative;
 	@include clearfix;
 
-	.title {
+	.us-title-desktop {
 		background: black;
 		padding: 25px;
+		display: none;
+
+		@include breakpoint(tablet) {
+			display: block;
+		}
 	
 		h2 {
 			position: relative;
@@ -20,83 +25,129 @@
 	}
 
 	.column {
-		float: left;
+		float: none;
 
-		li {
-			&.ornela {
-    			background: transparent url(../images/us/01.png) no-repeat right top;
-				background-size: cover;
-			}
+		@include breakpoint(tablet) {
+			float: left;
+		}
 
-			&.agustin {
-    			background: transparent url(../images/us/02.png) no-repeat center top;
-				background-size: cover;
+		ul {
+			width: 100%;
 
-				.info-person {
-					min-height: 360px;
+			// Columns
+
+			&.first {
+				@include breakpoint(tablet) {
+					width:20vw;
 				}
 			}
 
-			&.alan {
-				background: transparent url(../images/us/03.png) no-repeat center top;
-				background-size: cover;
-			}
-
-			&.martin {
-				background: transparent url(../images/us/04.png) no-repeat right top;
-				background-size: cover;
-			}
-
-			&.nehuel {
-				background: transparent url(../images/us/05.png) no-repeat left top;
-				background-size: cover;
-			}
-
-			&.belen {
-				background: transparent url(../images/us/06.png) no-repeat right top;
-				background-size: cover;
-
-				.info-person {
-					min-height: 310px;
+			&.second {
+				@include breakpoint(tablet) {
+					width:25vw;
 				}
 			}
 
-			&.julian {
-				background: transparent url(../images/us/07.png) no-repeat center center;
-				background-size: cover;
+			&.thrird {
+				@include breakpoint(tablet) {
+					width:20vw;
+				}
 			}
 
-			&.pre-julian {
-				min-height: 250px;
+			&.fourth {
+				@include breakpoint(tablet) {
+					width:20vw;
+				}
 			}
 
-			&.white{
-				display: none;
-    			height: 138px;
-
-    			@include breakpoint(tablet) {
-					display: block;
-    			}
+			&.fifth {
+				@include breakpoint(tablet) {
+					width:15vw;
+				}
 			}
 
-			&.grey-light {
-				display: none;
-    			height: 138px;
-    			background: $grey-light;
+			li {
+				min-height: 50vh;
 
-    			@include breakpoint(tablet) {
-					display: block;
-    			}
-			}
+				@include breakpoint(tablet) {
+					min-height: auto;
+				}
 
-			&.grey-dark {
-				display: none;
-    			height: 160px;
-    			background: $grey-dark;
+				&.ornela {
+	    			background: transparent url(../images/us/01.png) no-repeat right top;
+					background-size: cover;
+				}
 
-    			@include breakpoint(tablet) {
-					display: block;
-    			}
+				&.agustin {
+	    			background: transparent url(../images/us/02.png) no-repeat center top;
+					background-size: cover;
+
+					.info-person {
+						min-height: 360px;
+					}
+				}
+
+				&.alan {
+					background: transparent url(../images/us/03.png) no-repeat center top;
+					background-size: cover;
+				}
+
+				&.martin {
+					background: transparent url(../images/us/04.png) no-repeat right top;
+					background-size: cover;
+				}
+
+				&.nehuel {
+					background: transparent url(../images/us/05.png) no-repeat left top;
+					background-size: cover;
+				}
+
+				&.belen {
+					background: transparent url(../images/us/06.png) no-repeat right top;
+					background-size: cover;
+
+					.info-person {
+						min-height: 310px;
+					}
+				}
+
+				&.julian {
+					background: transparent url(../images/us/07.png) no-repeat center center;
+					background-size: cover;
+				}
+
+				&.pre-julian {
+					min-height: 250px;
+				}
+
+				&.white{
+					display: none;
+	    			height: 138px;
+
+	    			@include breakpoint(tablet) {
+						display: block;
+	    			}
+				}
+
+				&.grey-light {
+					display: none;
+	    			height: 138px;
+	    			background: $grey-light;
+
+	    			@include breakpoint(tablet) {
+						display: block;
+	    			}
+				}
+
+				&.grey-dark {
+					display: none;
+	    			height: 160px;
+	    			background: $grey-dark;
+
+	    			@include breakpoint(tablet) {
+						display: block;
+	    			}
+				}
 			}
 		}
 	}
@@ -129,26 +180,12 @@
 		right: 50px;
 		width: 30vw;
 	}
+}
 
-	// Columns
+.us-copy, .white {
+	display: none;
 
-	.first {
-		width:20vw;
-	}
-
-	.second {
-		width:25vw; 
-	}
-
-	.thrird {
-		width:20vw; 
-	}
-
-	.fourth {
-		width:20vw; 
-	}
-
-	.fifth {
-		width:15vw; 
+	@include breakpoint(tablet) {
+		display: block;
 	}
 }
