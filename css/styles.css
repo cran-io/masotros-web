@@ -739,6 +739,17 @@ header .logo .mobile-phagraf {
 .us:after {
   clear: both;
 }
+.us .us-title-mobile {
+  display: block;
+}
+@media (min-width: 768px) {
+  .us .us-title-mobile {
+    display: none;
+  }
+}
+.us .mobile-miselanius {
+  top: 112px;
+}
 .us .us-title-desktop {
   background: black;
   padding: 25px;
@@ -795,6 +806,7 @@ header .logo .mobile-phagraf {
 }
 .us .column ul li {
   min-height: 50vh;
+  position: relative;
 }
 @media (min-width: 768px) {
   .us .column ul li {
@@ -810,7 +822,12 @@ header .logo .mobile-phagraf {
   background-size: cover;
 }
 .us .column ul li.agustin .info-person {
-  min-height: 360px;
+  min-height: auto;
+}
+@media (min-width: 768px) {
+  .us .column ul li.agustin .info-person {
+    min-height: 360px;
+  }
 }
 .us .column ul li.alan {
   background: transparent url(../images/us/03.png) no-repeat center top;
@@ -829,7 +846,12 @@ header .logo .mobile-phagraf {
   background-size: cover;
 }
 .us .column ul li.belen .info-person {
-  min-height: 310px;
+  min-height: auto;
+}
+@media (min-width: 768px) {
+  .us .column ul li.belen .info-person {
+    min-height: 310px;
+  }
 }
 .us .column ul li.julian {
   background: transparent url(../images/us/07.png) no-repeat center center;
@@ -868,16 +890,35 @@ header .logo .mobile-phagraf {
   }
 }
 .us .info-person {
-  opacity: 0;
+  opacity: 1;
   background: rgba(0, 0, 0, 0.7);
   padding: 25px;
+  width: 70%;
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
   -moz-transition: opacity 0.3s ease-in-out;
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
+@media (min-width: 768px) {
+  .us .info-person {
+    opacity: 0;
+    width: 100%;
+    position: relative;
+    left: 0;
+    bottom: 0;
+  }
+}
 .us .info-person .person-description {
   font-size: 0.8rem;
   margin-top: 15px;
+  display: none;
+}
+@media (min-width: 768px) {
+  .us .info-person .person-description {
+    display: block;
+  }
 }
 .us .info-person:hover {
   opacity: 1;
@@ -887,11 +928,11 @@ header .logo .mobile-phagraf {
   font-size: 1.8rem;
 }
 .us .us-description {
+  position: initial !important;
   padding: 100px 25px;
   color: black;
   bottom: 50px;
   right: 50px;
-  width: 30vw;
 }
 
 .us-copy, .white {
@@ -927,9 +968,23 @@ header .logo .mobile-phagraf {
 .contact .contact-content-wrapper li {
   float: left;
 }
-.contact .title {
+.contact .title-desktop {
   width: 20vw;
   padding: 25px;
+  display: none;
+}
+@media (min-width: 768px) {
+  .contact .title-desktop {
+    display: block;
+  }
+}
+.contact .title-mobile {
+  display: block;
+}
+@media (min-width: 768px) {
+  .contact .title-mobile {
+    display: none;
+  }
 }
 .contact .grey-light {
   background: #e7e6e7;
@@ -954,16 +1009,22 @@ header .logo .mobile-phagraf {
   text-transform: initial;
 }
 .contact .contact-form {
-  background: black url(../images/contact/background.png) no-repeat right top;
+  background: black;
   background-size: cover;
   padding: 25px;
-  width: 65vw;
+  width: 100vw;
   min-height: 40vh;
   text-transform: uppercase;
 }
+@media (min-width: 768px) {
+  .contact .contact-form {
+    width: 65vw;
+    background: black url(../images/contact/background.png) no-repeat right top;
+  }
+}
 .contact .contact-form .columns {
   margin-top: 25px;
-  width: 75%;
+  width: 100%;
   position: relative;
   clear: both;
   margin-right: -5px;
@@ -986,6 +1047,11 @@ header .logo .mobile-phagraf {
     width: 50%;
   }
 }
+@media (min-width: 768px) {
+  .contact .contact-form .columns {
+    width: 75%;
+  }
+}
 .contact .contact-form .columns input, .contact .contact-form .columns textarea {
   font-family: "mas-regular", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
@@ -1003,11 +1069,22 @@ header .logo .mobile-phagraf {
 .contact .contact-form .columns textarea {
   height: 185px;
   margin-bottom: 0;
-  margin-left: 5px;
+  margin-left: 0px;
+}
+@media (min-width: 768px) {
+  .contact .contact-form .columns textarea {
+    margin-left: 5px;
+  }
 }
 .contact .contact-form .columns .icon-miselanius {
   color: white;
   font-size: 3.8rem;
+  display: none;
+}
+@media (min-width: 768px) {
+  .contact .contact-form .columns .icon-miselanius {
+    display: block;
+  }
 }
 .contact .contact-form .columns button[type="submit"] {
   font-family: "mas-bold", Helvetica, Arial, sans-serif;
@@ -1049,6 +1126,12 @@ header .logo .mobile-phagraf {
 }
 .contact .contact-location-wrapper .miselanius {
   margin: 15px;
+  display: none;
+}
+@media (min-width: 768px) {
+  .contact .contact-location-wrapper .miselanius {
+    display: block;
+  }
 }
 .contact .contact-social {
   padding: 100px 25px 25px;

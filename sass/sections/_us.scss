@@ -4,6 +4,19 @@
 	background: white;
 	position: relative;
 	@include clearfix;
+	
+	
+	.us-title-mobile {
+			display: block;
+
+			@include breakpoint(tablet) {
+				display: none;
+			}
+	}
+
+	.mobile-miselanius {
+		top: 112px;
+	}
 
 	.us-title-desktop {
 		background: black;
@@ -68,6 +81,7 @@
 
 			li {
 				min-height: 50vh;
+				position: relative;
 
 				@include breakpoint(tablet) {
 					min-height: auto;
@@ -83,7 +97,11 @@
 					background-size: cover;
 
 					.info-person {
-						min-height: 360px;
+						min-height: auto;
+
+	    				@include breakpoint(tablet) {
+							min-height: 360px;
+						}
 					}
 				}
 
@@ -107,7 +125,11 @@
 					background-size: cover;
 
 					.info-person {
-						min-height: 310px;
+						min-height: auto;
+
+	    				@include breakpoint(tablet) {
+							min-height: 310px;
+	    				}
 					}
 				}
 
@@ -153,14 +175,31 @@
 	}
 
 	.info-person {
-		opacity: 0;
+		opacity: 1;
 		background: rgba(black, .7);
 		padding: 25px;
+		width: 70%;
+		position: absolute;
+		left: 25px;
+		bottom: 25px;
 		@include transition(opacity $timing);
+
+		@include breakpoint(tablet) {
+			opacity: 0;
+			width: 100%;
+			position: relative;
+			left: 0;
+			bottom: 0;
+		}
 		
 		.person-description {
 			font-size: map-get($font-size, smallest);
 			margin-top: 15px;
+			display: none;
+
+			@include breakpoint(tablet) {
+				display: block;
+			}
 		}
 
 		&:hover {
@@ -174,11 +213,11 @@
 	}
 
 	.us-description {
+		position: initial !important;
 		padding: 100px 25px;
 		color: black;
 		bottom: 50px;
 		right: 50px;
-		width: 30vw;
 	}
 }
 

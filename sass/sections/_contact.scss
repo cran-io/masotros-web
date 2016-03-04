@@ -21,9 +21,22 @@
 		}
 	}
 
-	.title {
+	.title-desktop {
 		width:20vw;
 		padding: 25px;
+		display: none;
+
+		@include breakpoint(tablet) {
+			display: block;
+		}
+	}
+
+	.title-mobile {
+		display: block;
+
+		@include breakpoint(tablet) {
+			display: none;
+		}
 	}
 
 	.grey-light {
@@ -53,19 +66,28 @@
 	}
 
 	.contact-form {
-		background: black url(../images/contact/background.png) no-repeat right top;
+		background: black;
 		background-size: cover;
 		padding: 25px;
-		width: 65vw;
+		width: 100vw;
 		min-height: 40vh;
 		text-transform: uppercase;
 
+		@include breakpoint(tablet) {
+			width: 65vw;
+			background: black url(../images/contact/background.png) no-repeat right top;
+		}
+
 		.columns{
 			margin-top: 25px;
-			width: 75%;
+			width: 100%;
 			position: relative;
 			@include clearfix;
 			@include grid(2, 5px, '.column');
+
+			@include breakpoint(tablet) {
+				width: 75%;
+			}
 
 			input, textarea {
 				font-family: $font-regular;
@@ -84,12 +106,21 @@
 			textarea {
 				height: 185px;
 			    margin-bottom: 0;
-			    margin-left: 5px;
+			    margin-left: 0px;
+
+			    @include breakpoint(tablet) {
+			    	margin-left: 5px;
+			    }
 			}
 
 			.icon-miselanius {
 				color: white;
 				font-size: map-get($font-size, biggest);
+				display: none;
+
+				@include breakpoint(tablet) {
+					display: block;
+				}
 			}
 
 			button[type="submit"] {
@@ -137,6 +168,11 @@
 
 		.miselanius {
 			margin: 15px;
+			display: none;
+
+			@include breakpoint(tablet) {
+				display: block;
+			}
 		}
 	}
 
