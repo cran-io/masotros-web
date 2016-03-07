@@ -90,6 +90,15 @@
 				&.ornela {
 	    			background: transparent url(../images/us/01.png) no-repeat right top;
 					background-size: cover;
+
+
+					.info-person {	
+    					left: 125px;
+
+	    				@include breakpoint(tablet) {	
+    						left: 25px;
+						}
+					}
 				}
 
 				&.agustin {

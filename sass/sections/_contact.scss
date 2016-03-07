@@ -21,6 +21,44 @@
 		}
 	}
 
+	li.contact-data-wrapper {
+		text-transform: uppercase;
+		background: $grey-light;
+		position: relative;
+		width: 178px;
+    	height: 138px;
+		margin-top: 30px;
+		float: right;
+		color: black;
+
+		a {
+			color: black;
+		}
+
+		@include breakpoint(tablet) {
+			float: left;
+			background: $grey-dark;
+			color: white;
+			width: 35vw;
+			height: 20vh;
+			margin-top: 0px;
+
+			a {
+				color: white;
+			}
+		}
+
+		.data {
+			position: absolute;
+			bottom:25px;
+			left: 25px;
+
+			a { 
+				text-transform: initial;
+			}
+		}
+	}
+
 	.title-desktop {
 		width:20vw;
 		padding: 25px;
@@ -32,10 +70,25 @@
 	}
 
 	.title-mobile {
+		background: $grey-dark;
+    	padding-top: 30px;
+    	padding-left: 30px;
+    	padding-right: 30px;
 		display: block;
+		height: 20vh;
+		min-height: 250px;
+
+		h2 {
+			color: white;
+			min-height: auto;
+		}
 
 		@include breakpoint(tablet) {
 			display: none;
+
+			h2 {
+				color: black;
+			}
 		}
 	}
 
@@ -45,23 +98,10 @@
 		margin-right: 20vw;
 		width: 15vw;
 		height: 20vh;
-	}
-
-	.contact-data-wrapper {
-		background: $grey-dark;
-		text-transform: uppercase;
-		width: 35vw;
-		height: 20vh;
-		position: relative;
-
-		.data {
-			position: absolute;
-			bottom:25px;
-			left: 25px;
-
-			a { 
-				text-transform: initial;
-			}
+		display: none;
+		
+		@include breakpoint(tablet) {
+			display: block;
 		}
 	}
 
@@ -162,8 +202,15 @@
 		text-transform: uppercase;
 
 		.location {
-			padding: 25px;
-			background: $grey-dark;
+			padding: 25px 0px 0px 0px;
+			background: white;
+			color: black;
+			
+			@include breakpoint(tablet) {
+				padding: 25px;
+				background: $grey-dark;
+				color: white;
+			}
 		}
 
 		.miselanius {
@@ -176,9 +223,17 @@
 		}
 	}
 
+	.mobile-miselanius {
+   		top: 100px;
+	}
+
 	.contact-social {
-		padding: 100px 25px 25px;
+		padding: 30px 25px 25px 0;
 		font-size: map-get($font-size, small);
+
+		@include breakpoint(tablet) {
+			padding: 100px 25px 25px;
+		}
 
 		a {
 			color: black;

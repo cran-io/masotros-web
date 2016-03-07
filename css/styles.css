@@ -817,6 +817,14 @@ header .logo .mobile-phagraf {
   background: transparent url(../images/us/01.png) no-repeat right top;
   background-size: cover;
 }
+.us .column ul li.ornela .info-person {
+  left: 125px;
+}
+@media (min-width: 768px) {
+  .us .column ul li.ornela .info-person {
+    left: 25px;
+  }
+}
 .us .column ul li.agustin {
   background: transparent url(../images/us/02.png) no-repeat center top;
   background-size: cover;
@@ -968,6 +976,40 @@ header .logo .mobile-phagraf {
 .contact .contact-content-wrapper li {
   float: left;
 }
+.contact li.contact-data-wrapper {
+  text-transform: uppercase;
+  background: #e7e6e7;
+  position: relative;
+  width: 178px;
+  height: 138px;
+  margin-top: 30px;
+  float: right;
+  color: black;
+}
+.contact li.contact-data-wrapper a {
+  color: black;
+}
+@media (min-width: 768px) {
+  .contact li.contact-data-wrapper {
+    float: left;
+    background: #333132;
+    color: white;
+    width: 35vw;
+    height: 20vh;
+    margin-top: 0px;
+  }
+  .contact li.contact-data-wrapper a {
+    color: white;
+  }
+}
+.contact li.contact-data-wrapper .data {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+}
+.contact li.contact-data-wrapper .data a {
+  text-transform: initial;
+}
 .contact .title-desktop {
   width: 20vw;
   padding: 25px;
@@ -979,11 +1021,24 @@ header .logo .mobile-phagraf {
   }
 }
 .contact .title-mobile {
+  background: #333132;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
   display: block;
+  height: 20vh;
+  min-height: 250px;
+}
+.contact .title-mobile h2 {
+  color: white;
+  min-height: auto;
 }
 @media (min-width: 768px) {
   .contact .title-mobile {
     display: none;
+  }
+  .contact .title-mobile h2 {
+    color: black;
   }
 }
 .contact .grey-light {
@@ -992,21 +1047,12 @@ header .logo .mobile-phagraf {
   margin-right: 20vw;
   width: 15vw;
   height: 20vh;
+  display: none;
 }
-.contact .contact-data-wrapper {
-  background: #333132;
-  text-transform: uppercase;
-  width: 35vw;
-  height: 20vh;
-  position: relative;
-}
-.contact .contact-data-wrapper .data {
-  position: absolute;
-  bottom: 25px;
-  left: 25px;
-}
-.contact .contact-data-wrapper .data a {
-  text-transform: initial;
+@media (min-width: 768px) {
+  .contact .grey-light {
+    display: block;
+  }
 }
 .contact .contact-form {
   background: black;
@@ -1121,8 +1167,16 @@ header .logo .mobile-phagraf {
   text-transform: uppercase;
 }
 .contact .contact-location-wrapper .location {
-  padding: 25px;
-  background: #333132;
+  padding: 25px 0px 0px 0px;
+  background: white;
+  color: black;
+}
+@media (min-width: 768px) {
+  .contact .contact-location-wrapper .location {
+    padding: 25px;
+    background: #333132;
+    color: white;
+  }
 }
 .contact .contact-location-wrapper .miselanius {
   margin: 15px;
@@ -1133,9 +1187,17 @@ header .logo .mobile-phagraf {
     display: block;
   }
 }
+.contact .mobile-miselanius {
+  top: 100px;
+}
 .contact .contact-social {
-  padding: 100px 25px 25px;
+  padding: 30px 25px 25px 0;
   font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .contact .contact-social {
+    padding: 100px 25px 25px;
+  }
 }
 .contact .contact-social a {
   color: black;
