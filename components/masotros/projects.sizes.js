@@ -27,15 +27,8 @@ $(window).load(function(){
 	});
 });
 
-$(window).load(function(){
-	resizeProyectImage();
-});
 
-$(window).on('resize', function(){
-	resizeProyectImage();
-});
-
-function resizeProyectImage() {
+resizeProyectImage = function(){
 	if(window.innerHeight >= $('.screen li img').innerHeight())
 	{
 		$('.screen li img').css({'width':'auto', 'height': '100vh'});
@@ -44,4 +37,12 @@ function resizeProyectImage() {
 		$('.screen li img').css({'width':'100vw', 'height': 'auto'});
 	} 
 };
+
+$(window).bind('resize', resizeProyectImage);
+
+$(window).on('resize', resizeProyectImage);
+
+$(onResize);
+
+
 
