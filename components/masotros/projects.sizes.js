@@ -27,8 +27,7 @@ $(window).load(function(){
 	});
 });
 
-
-resizeProyectImage = function(){
+function resizeProyectImage(){
 	if(window.innerHeight >= $('.screen li img').innerHeight())
 	{
 		$('.screen li img').css({'width':'auto', 'height': '100vh'});
@@ -38,11 +37,12 @@ resizeProyectImage = function(){
 	} 
 };
 
-$(window).bind('resize', resizeProyectImage);
-
 $(window).on('resize', resizeProyectImage);
 
-$(onResize);
-
+$(window).load(function(e) {
+    $(".overlay").fadeOut(500,function(){
+        resizeProyectImage();
+    });
+});
 
 

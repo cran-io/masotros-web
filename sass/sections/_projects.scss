@@ -32,7 +32,8 @@
 			width: 100vw;
 
 			img {
-				width: auto;
+				transform: translateX(-50%);
+    			margin-left: 50%;
 			}
 		}
 	}
@@ -118,6 +119,7 @@
     bottom: 90px;
     width: 90%;
     margin: 0 0 0 90px;
+    z-index: 10;
 
     p {
     	font-size: map-get($font-size, smallest);

@@ -261,6 +261,16 @@ a:hover {
   display: block;
 }
 
+.overlay {
+  position: fixed;
+  background: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
 section {
   position: relative;
 }
@@ -544,7 +554,8 @@ header .logo .mobile-phagraf {
   width: 100vw;
 }
 .flexslider.screen li img {
-  width: auto;
+  transform: translateX(-50%);
+  margin-left: 50%;
 }
 .flexslider.carrousel .slides img {
   -moz-transition: opacity 0.3s ease-in-out;
@@ -606,6 +617,7 @@ header .logo .mobile-phagraf {
   bottom: 90px;
   width: 90%;
   margin: 0 0 0 90px;
+  z-index: 10;
 }
 .project-info p {
   font-size: 0.8rem;
