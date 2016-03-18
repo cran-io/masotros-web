@@ -122,11 +122,28 @@
 				&.martin {
 					background: transparent url(../images/us/04.png) no-repeat right top;
 					background-size: cover;
+
+					.info-person {
+						min-height: auto;
+
+	    				@include breakpoint(tablet) {
+							min-height: 30vh;
+						}
+					}
 				}
 
 				&.nehuel {
 					background: transparent url(../images/us/05.png) no-repeat left top;
 					background-size: cover;
+
+					.info-person {
+						min-height: auto;
+
+	    				@include breakpoint(tablet) {
+							min-height: 30vh;
+						}
+					}
+
 				}
 
 				&.belen {
@@ -137,7 +154,7 @@
 						min-height: auto;
 
 	    				@include breakpoint(tablet) {
-							min-height: 310px;
+							min-height: 40vh;
 	    				}
 					}
 				}

@@ -211,16 +211,7 @@
 			display: inline-block;
 		}
 
-		.open {
-
-		}
-		
-		.close {
-
-		}
-
-		&:hover {
-
+		&.open {
 			.icon-more {
 				@include transform(rotate(90deg), translateZ(0));
 				color: $mas-color;
@@ -233,6 +224,22 @@
 			&+.info-box {
 				opacity: 1;
 				margin-top: 0;
+			}
+		}
+		
+		.close {
+
+		}
+
+		&:hover {
+
+			.icon-more {
+				@include transform(rotate(90deg), translateZ(0));
+				color: $mas-color;
+			}
+
+			p {
+				margin-left: -15px;
 			}
 		}
 	}
