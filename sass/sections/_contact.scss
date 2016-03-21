@@ -92,7 +92,7 @@
 		}
 	}
 
-	.grey-light {
+	.grey-light, .grey-light-second {
 		background: $grey-light;
 		margin-left: 30vw;
 		margin-right: 20vw;
@@ -105,29 +105,30 @@
 		}
 	}
 
+	.grey-light-second {
+		margin-left: 0;
+		margin-right: 0;
+		width: 13vw;
+		height: 32vh
+	}
+
 	.contact-form {
 		background: black;
 		background-size: cover;
 		padding: 25px;
 		width: 100vw;
-		min-height: 40vh;
+		min-height: 32vh;
 		text-transform: uppercase;
 
 		@include breakpoint(tablet) {
-			width: 65vw;
-			background: black url(../images/contact/background.png) no-repeat right top;
+			width: 52vw;
 		}
 
 		.columns{
-			margin-top: 25px;
 			width: 100%;
 			position: relative;
 			@include clearfix;
 			@include grid(2, 5px, '.column');
-
-			@include breakpoint(tablet) {
-				width: 75%;
-			}
 
 			input, textarea {
 				font-family: $font-regular;
@@ -182,24 +183,31 @@
 		}
 	}
 
-	.contact-bg-left {
-		background: black url(../images/contact/01.png) no-repeat right top;
-		background-size: cover;
-		height: 40vh;
-		width: 25vw;
+	.grey-strong{
+		background: $grey-dark;
+		width: 10vw;
+		height: 50vh;
+		display: none;
+		
+		@include breakpoint(tablet) {
+			display: block;
+		}
 	}
 
-	.contact-bg-right {
-		background: black url(../images/contact/02.png) no-repeat right top;
-		background-size: cover;
-		height: 40vh;
-		width: 25vw;
-		margin-right: 10vw	;
+	.contact-map {
+		height: 50vh;
+		width: 50vw;
+
+		#map-canvas {
+		    width: 100%;
+		    height: 100%;
+		}
 	}
 
 	.contact-location-wrapper {
 		width: 25vw;
 		text-transform: uppercase;
+		position: relative;
 
 		.location {
 			padding: 25px 0px 0px 0px;
@@ -216,6 +224,7 @@
 		.miselanius {
 			margin: 15px;
 			display: none;
+			width: 80px;
 
 			@include breakpoint(tablet) {
 				display: block;
@@ -228,12 +237,12 @@
 	}
 
 	.contact-social {
-		padding: 30px 25px 25px 0;
-		font-size: map-get($font-size, small);
+		padding: 30px  0;
+		position: absolute;
+		top: 155px;
+		right: 15px;
+		font-size: map-get($font-size, higlight);
 
-		@include breakpoint(tablet) {
-			padding: 100px 25px 25px;
-		}
 
 		a {
 			color: black;

@@ -32,6 +32,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-github:before {
+  content: "\e907";
+}
+
 .icon-facebook:before {
   content: "\e904";
 }
@@ -1078,7 +1082,7 @@ header .logo .mobile-phagraf {
     color: black;
   }
 }
-.contact .grey-light {
+.contact .grey-light, .contact .grey-light-second {
   background: #e7e6e7;
   margin-left: 30vw;
   margin-right: 20vw;
@@ -1087,26 +1091,30 @@ header .logo .mobile-phagraf {
   display: none;
 }
 @media (min-width: 768px) {
-  .contact .grey-light {
+  .contact .grey-light, .contact .grey-light-second {
     display: block;
   }
+}
+.contact .grey-light-second {
+  margin-left: 0;
+  margin-right: 0;
+  width: 13vw;
+  height: 32vh;
 }
 .contact .contact-form {
   background: black;
   background-size: cover;
   padding: 25px;
   width: 100vw;
-  min-height: 40vh;
+  min-height: 32vh;
   text-transform: uppercase;
 }
 @media (min-width: 768px) {
   .contact .contact-form {
-    width: 65vw;
-    background: black url(../images/contact/background.png) no-repeat right top;
+    width: 52vw;
   }
 }
 .contact .contact-form .columns {
-  margin-top: 25px;
   width: 100%;
   position: relative;
   clear: both;
@@ -1128,11 +1136,6 @@ header .logo .mobile-phagraf {
 @media (min-width: 768px) {
   .contact .contact-form .columns .column {
     width: 50%;
-  }
-}
-@media (min-width: 768px) {
-  .contact .contact-form .columns {
-    width: 75%;
   }
 }
 .contact .contact-form .columns input, .contact .contact-form .columns textarea {
@@ -1186,22 +1189,29 @@ header .logo .mobile-phagraf {
 .contact .contact-form .columns button[type="submit"]:hover {
   background: #34aec4;
 }
-.contact .contact-bg-left {
-  background: black url(../images/contact/01.png) no-repeat right top;
-  background-size: cover;
-  height: 40vh;
-  width: 25vw;
+.contact .grey-strong {
+  background: #333132;
+  width: 10vw;
+  height: 50vh;
+  display: none;
 }
-.contact .contact-bg-right {
-  background: black url(../images/contact/02.png) no-repeat right top;
-  background-size: cover;
-  height: 40vh;
-  width: 25vw;
-  margin-right: 10vw;
+@media (min-width: 768px) {
+  .contact .grey-strong {
+    display: block;
+  }
+}
+.contact .contact-map {
+  height: 50vh;
+  width: 50vw;
+}
+.contact .contact-map #map-canvas {
+  width: 100%;
+  height: 100%;
 }
 .contact .contact-location-wrapper {
   width: 25vw;
   text-transform: uppercase;
+  position: relative;
 }
 .contact .contact-location-wrapper .location {
   padding: 25px 0px 0px 0px;
@@ -1218,6 +1228,7 @@ header .logo .mobile-phagraf {
 .contact .contact-location-wrapper .miselanius {
   margin: 15px;
   display: none;
+  width: 80px;
 }
 @media (min-width: 768px) {
   .contact .contact-location-wrapper .miselanius {
@@ -1228,13 +1239,11 @@ header .logo .mobile-phagraf {
   top: 100px;
 }
 .contact .contact-social {
-  padding: 30px 25px 25px 0;
-  font-size: 1rem;
-}
-@media (min-width: 768px) {
-  .contact .contact-social {
-    padding: 100px 25px 25px;
-  }
+  padding: 30px  0;
+  position: absolute;
+  top: 155px;
+  right: 15px;
+  font-size: 1.4rem;
 }
 .contact .contact-social a {
   color: black;

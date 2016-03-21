@@ -40,6 +40,9 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-github:before {
+    content: "\e907";
+}
 .icon-facebook:before {
     content: "\e904";
 }
@@ -61,5 +64,7 @@
 .icon-miselanius:before {
     content: "\e903";
 }
+
+
 
 
