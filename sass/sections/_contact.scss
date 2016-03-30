@@ -185,6 +185,17 @@
 
 	.grey-strong{
 		background: $grey-dark;
+		width: 20vw;
+		height: 50vh;
+		display: none;
+		
+		@include breakpoint(tablet) {
+			display: block;
+		}
+	}
+
+	.grey-light-third{
+		background: $grey-light;
 		width: 10vw;
 		height: 50vh;
 		display: none;
@@ -196,7 +207,7 @@
 
 	.contact-map {
 		height: 50vh;
-		width: 50vw;
+		width: 30vw;
 
 		#map-canvas {
 		    width: 100%;
@@ -241,7 +252,7 @@
 		position: absolute;
 		top: 155px;
 		right: 15px;
-		font-size: map-get($font-size, higlight);
+		font-size: map-get($font-size, medium);
 
 
 		a {

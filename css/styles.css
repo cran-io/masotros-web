@@ -775,24 +775,6 @@ header .logo .mobile-phagraf {
 .us .mobile-miselanius {
   top: 112px;
 }
-.us .us-title-desktop {
-  background: black;
-  padding: 25px;
-  display: none;
-}
-@media (min-width: 768px) {
-  .us .us-title-desktop {
-    display: block;
-  }
-}
-.us .us-title-desktop h2 {
-  position: relative;
-  left: 0;
-  top: 0;
-  display: inline-block;
-  width: 100%;
-  margin-top: 25px;
-}
 .us .column {
   float: none;
 }
@@ -847,7 +829,8 @@ header .logo .mobile-phagraf {
 }
 @media (min-width: 768px) {
   .us .column ul li.ornela .info-person {
-    left: 25px;
+    left: 0px;
+    min-height: 40vh;
   }
 }
 .us .column ul li.agustin {
@@ -859,12 +842,50 @@ header .logo .mobile-phagraf {
 }
 @media (min-width: 768px) {
   .us .column ul li.agustin .info-person {
-    min-height: 360px;
+    min-height: 40vh;
   }
+}
+.us .column ul li.us-title-desktop {
+  background: black;
+  padding: 25px;
+  display: none;
+  min-height: 28vh;
+}
+@media (min-width: 768px) {
+  .us .column ul li.us-title-desktop {
+    display: block;
+  }
+}
+.us .column ul li.us-title-desktop h2 {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  width: 100%;
+  margin-top: 25px;
 }
 .us .column ul li.alan {
   background: transparent url(../images/us/03.png) no-repeat center top;
   background-size: cover;
+}
+.us .column ul li.alan .info-person {
+  min-height: auto;
+}
+@media (min-width: 768px) {
+  .us .column ul li.alan .info-person {
+    display: block;
+    min-height: 25vh;
+  }
+}
+.us .column ul li.grey-black-second {
+  display: none;
+  height: 32vh;
+  background: #333132;
+}
+@media (min-width: 768px) {
+  .us .column ul li.grey-black-second {
+    display: block;
+  }
 }
 .us .column ul li.martin {
   background: transparent url(../images/us/04.png) no-repeat right top;
@@ -899,19 +920,47 @@ header .logo .mobile-phagraf {
 }
 @media (min-width: 768px) {
   .us .column ul li.belen .info-person {
-    min-height: 40vh;
+    min-height: 25vh;
+  }
+}
+.us .column ul li.grey-light-third {
+  display: none;
+  height: 15vh;
+  background: #e7e6e7;
+}
+@media (min-width: 768px) {
+  .us .column ul li.grey-light-third {
+    display: block;
   }
 }
 .us .column ul li.julian {
   background: transparent url(../images/us/07.png) no-repeat center center;
   background-size: cover;
 }
+.us .column ul li.julian .info-person {
+  min-height: auto;
+}
+@media (min-width: 768px) {
+  .us .column ul li.julian .info-person {
+    min-height: 15vh;
+  }
+}
+.us .column ul li.grey-dark-fourth {
+  display: none;
+  height: 55vh;
+  background: #333132;
+}
+@media (min-width: 768px) {
+  .us .column ul li.grey-dark-fourth {
+    display: block;
+  }
+}
 .us .column ul li.pre-julian {
   min-height: 250px;
 }
 .us .column ul li.white {
   display: none;
-  height: 138px;
+  height: 15vh;
 }
 @media (min-width: 768px) {
   .us .column ul li.white {
@@ -937,6 +986,14 @@ header .logo .mobile-phagraf {
   .us .column ul li.grey-dark {
     display: block;
   }
+}
+.us .column ul li.us-description {
+  position: initial !important;
+  padding: 25px;
+  color: black;
+  bottom: 10px;
+  right: 50px;
+  min-height: 15vh;
 }
 .us .info-person {
   opacity: 1;
@@ -975,13 +1032,7 @@ header .logo .mobile-phagraf {
 .us .us-inovation {
   padding: 25px;
   font-size: 1.8rem;
-}
-.us .us-description {
-  position: initial !important;
-  padding: 100px 25px;
-  color: black;
-  bottom: 50px;
-  right: 50px;
+  min-height: 15vh;
 }
 
 .us-copy, .white {
@@ -1191,7 +1242,7 @@ header .logo .mobile-phagraf {
 }
 .contact .grey-strong {
   background: #333132;
-  width: 10vw;
+  width: 20vw;
   height: 50vh;
   display: none;
 }
@@ -1200,9 +1251,20 @@ header .logo .mobile-phagraf {
     display: block;
   }
 }
+.contact .grey-light-third {
+  background: #e7e6e7;
+  width: 10vw;
+  height: 50vh;
+  display: none;
+}
+@media (min-width: 768px) {
+  .contact .grey-light-third {
+    display: block;
+  }
+}
 .contact .contact-map {
   height: 50vh;
-  width: 50vw;
+  width: 30vw;
 }
 .contact .contact-map #map-canvas {
   width: 100%;
@@ -1243,7 +1305,7 @@ header .logo .mobile-phagraf {
   position: absolute;
   top: 155px;
   right: 15px;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
 }
 .contact .contact-social a {
   color: black;

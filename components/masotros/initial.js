@@ -74,50 +74,50 @@ $(function() {
 
 //---------- Google Maps
 
-function initialize() {
-  var styles = [
-    {
-      stylers: [
-        { hue: "#34aec4" },
-        { saturation: 60 },
-        { lightness: -20 }
-      ]
-    },{
-      featureType: "road",
-      elementType: "geometry",
-      stylers: [
-        { lightness: 100 },
-        { visibility: "simplified" }
-      ]
-    },{
-      featureType: "road",
-      elementType: "labels",
-      stylers: [
-        { lightness: 20 }      ]
-    }
-  ];
+// function initialize() {
+//   var styles = [
+//     {
+//       stylers: [
+//         { hue: "#34aec4" },
+//         { saturation: 60 },
+//         { lightness: -20 }
+//       ]
+//     },{
+//       featureType: "road",
+//       elementType: "geometry",
+//       stylers: [
+//         { lightness: 100 },
+//         { visibility: "simplified" }
+//       ]
+//     },{
+//       featureType: "road",
+//       elementType: "labels",
+//       stylers: [
+//         { lightness: 20 }      ]
+//     }
+//   ];
 
-  var styledMap = new google.maps.StyledMapType(styles,
-    {name: "Styled Map"});
+//   var styledMap = new google.maps.StyledMapType(styles,
+//     {name: "Styled Map"});
   
-  var mapCanvas = document.getElementById('map-canvas');
-  var pos = new google.maps.LatLng(-34.585481, -58.4312834,17);
-  var mapOptions = {
-    center: pos,
-    zoom: 15,
-        scaleControl: false,
-        disableDoubleClickZoom: true,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  }
-  var map = new google.maps.Map(mapCanvas, mapOptions)
+//   var mapCanvas = document.getElementById('map-canvas');
+//   var pos = new google.maps.LatLng(-34.585481, -58.4312834,17);
+//   var mapOptions = {
+//     center: pos,
+//     zoom: 15,
+//         scaleControl: false,
+//         disableDoubleClickZoom: true,
+//     mapTypeId: google.maps.MapTypeId.ROADMAP
+//   }
+//   var map = new google.maps.Map(mapCanvas, mapOptions)
 
-  var mapStylesmarker = new google.maps.Marker({
-    position: pos,
-    map: map,
-    title: 'Uriarte 1882'
-  });
+//   var mapStylesmarker = new google.maps.Marker({
+//     position: pos,
+//     map: map,
+//     title: 'Uriarte 1882'
+//   });
 
-  map.mapTypes.set('map_style', styledMap);
-  map.setMapTypeId('map_style');
-}
-google.maps.event.addDomListener(window, 'load', initialize);
+//   map.mapTypes.set('map_style', styledMap);
+//   map.setMapTypeId('map_style');
+// }
+// google.maps.event.addDomListener(window, 'load', initialize);
