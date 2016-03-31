@@ -72,6 +72,32 @@ $(function() {
   });
 });
 
+
+// Internal Galery Slider
+
+$(document).ready(function(){
+
+  $('.screen .slides li').each( function(index){
+    var count = $(this).find('img').length;
+
+    switch(count) {
+      case 1:
+      break;
+      case 2:
+      $(this).addClass('two-img');
+      break;
+      case 3:
+      $(this).addClass('three-img');
+      break;
+      default:
+      break;
+    }
+
+  });
+});
+
+
+
 //---------- Google Maps
 
 // function initialize() {
@@ -99,7 +125,7 @@ $(function() {
 
 //   var styledMap = new google.maps.StyledMapType(styles,
 //     {name: "Styled Map"});
-  
+
 //   var mapCanvas = document.getElementById('map-canvas');
 //   var pos = new google.maps.LatLng(-34.585481, -58.4312834,17);
 //   var mapOptions = {

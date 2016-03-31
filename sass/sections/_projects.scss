@@ -8,9 +8,9 @@
 	
 	.mobile-miselanius{
 		z-index: 20;
-	    position: absolute;
-	    font-size: 130px;
-	    top: 80px;
+		position: absolute;
+		font-size: 130px;
+		top: 80px;
 	}
 }
 
@@ -30,10 +30,40 @@
 			overflow:hidden;
 			height: 100vh;
 			width: 100vw;
+			position: relative;
+
+			&.two-img {
+
+				img:nth-child(2){
+					@include animation(image 12s 0s infinite);
+				}
+
+				img:nth-child(1){
+					@include animation(image 12s 6s infinite);
+				}
+			}
+
+			&.three-img {
+
+				img:nth-child(3){
+					@include animation(image 18s 0s infinite);
+				}
+
+				img:nth-child(2){
+					@include animation(image 18s 6s infinite);
+				}
+
+				img:nth-child(1){
+					@include animation(image 18s 12s infinite);
+				}
+			}
 
 			img {
 				transform: translateX(-50%);
-    			margin-left: 50%;
+				margin-left: 50%;
+				position: absolute;
+				top: 0;
+				left: 0;
 			}
 		}
 	}
@@ -103,9 +133,9 @@
 	a {
 
 		&:before {
-    		font-size: 22px;
+			font-size: 22px;
 			margin-top: 10px;
-    		color: white;
+			color: white;
 			text-shadow: none;
 		}
 	}
@@ -115,20 +145,20 @@
 
 .project-info {
 	max-width: 555px;
-    position: absolute;
-    bottom: 90px;
-    width: 90%;
-    margin: 0 0 0 90px;
-    z-index: 10;
+	position: absolute;
+	bottom: 90px;
+	width: 90%;
+	margin: 0 0 0 90px;
+	z-index: 10;
 
-    p {
-    	font-size: map-get($font-size, smallest);
-    }
+	p {
+		font-size: map-get($font-size, smallest);
+	}
 
-    .icon-miselanius {
-    	font-size: map-get($font-size, big);
-    	font-weight: bold;
-    }
+	.icon-miselanius {
+		font-size: map-get($font-size, big);
+		font-weight: bold;
+	}
 	
 	.info-box {
 		opacity: 1;
@@ -184,14 +214,14 @@
 	.info-button {
 		position: absolute;
 		bottom: -60px;
-    	left: -60px;
+		left: -60px;
 		cursor: pointer;
 		pointer-events: none;
 
 		@include breakpoint(tablet) {
 			pointer-events: auto;
 			bottom: -40px;
-	    	left: -40px;
+			left: -40px;
 		}
 
 		p {
@@ -244,3 +274,4 @@
 		}
 	}
 }
+

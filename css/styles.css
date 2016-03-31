@@ -108,6 +108,74 @@
     bottom: 0px;
   }
 }
+@-moz-keyframes image {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes image {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+}
+@-o-keyframes image {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+}
+@keyframes image {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -556,10 +624,44 @@ header .logo .mobile-phagraf {
   overflow: hidden;
   height: 100vh;
   width: 100vw;
+  position: relative;
+}
+.flexslider.screen li.two-img img:nth-child(2) {
+  -moz-animation: image 12s 0s infinite;
+  -webkit-animation: image 12s 0s infinite;
+  -o-animation: image 12s 0s infinite;
+  animation: image 12s 0s infinite;
+}
+.flexslider.screen li.two-img img:nth-child(1) {
+  -moz-animation: image 12s 6s infinite;
+  -webkit-animation: image 12s 6s infinite;
+  -o-animation: image 12s 6s infinite;
+  animation: image 12s 6s infinite;
+}
+.flexslider.screen li.three-img img:nth-child(3) {
+  -moz-animation: image 18s 0s infinite;
+  -webkit-animation: image 18s 0s infinite;
+  -o-animation: image 18s 0s infinite;
+  animation: image 18s 0s infinite;
+}
+.flexslider.screen li.three-img img:nth-child(2) {
+  -moz-animation: image 18s 6s infinite;
+  -webkit-animation: image 18s 6s infinite;
+  -o-animation: image 18s 6s infinite;
+  animation: image 18s 6s infinite;
+}
+.flexslider.screen li.three-img img:nth-child(1) {
+  -moz-animation: image 18s 12s infinite;
+  -webkit-animation: image 18s 12s infinite;
+  -o-animation: image 18s 12s infinite;
+  animation: image 18s 12s infinite;
 }
 .flexslider.screen li img {
   transform: translateX(-50%);
   margin-left: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .flexslider.carrousel .slides img {
   -moz-transition: opacity 0.3s ease-in-out;
