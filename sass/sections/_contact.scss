@@ -208,6 +208,11 @@
 	.contact-map {
 		height: 50vh;
 		width: 30vw;
+		display: none;
+		
+		@include breakpoint(tablet) {
+			display: block;
+		}
 
 		#map-canvas {
 		    width: 100%;
@@ -216,12 +221,16 @@
 	}
 
 	.contact-location-wrapper {
-		width: 25vw;
+		width: 100vw;
 		text-transform: uppercase;
 		position: relative;
 
+		@include breakpoint(tablet) {
+			width: 25vw;
+		}
+
 		.location {
-			padding: 25px 0px 0px 0px;
+			padding: 25px 25px 85px 25px;
 			background: white;
 			color: black;
 			
@@ -250,9 +259,16 @@
 	.contact-social {
 		padding: 30px  0;
 		position: absolute;
-		top: 155px;
-		right: 15px;
 		font-size: map-get($font-size, medium);
+		top: 115px;
+    	left: 25px;
+		right: auto;
+
+    	@include breakpoint(tablet) {
+			top: 155px;
+			right: 15px;
+			left: auto;
+    	}
 
 
 		a {

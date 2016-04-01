@@ -759,7 +759,7 @@ header .logo .mobile-phagraf {
 .project-info .info-box .box-black {
   background: black;
   padding: 18px;
-  width: 36%;
+  width: 56%;
 }
 @media (min-width: 768px) {
   .project-info .info-box .box-black {
@@ -1367,18 +1367,29 @@ header .logo .mobile-phagraf {
 .contact .contact-map {
   height: 50vh;
   width: 30vw;
+  display: none;
+}
+@media (min-width: 768px) {
+  .contact .contact-map {
+    display: block;
+  }
 }
 .contact .contact-map #map-canvas {
   width: 100%;
   height: 100%;
 }
 .contact .contact-location-wrapper {
-  width: 25vw;
+  width: 100vw;
   text-transform: uppercase;
   position: relative;
 }
+@media (min-width: 768px) {
+  .contact .contact-location-wrapper {
+    width: 25vw;
+  }
+}
 .contact .contact-location-wrapper .location {
-  padding: 25px 0px 0px 0px;
+  padding: 25px 25px 85px 25px;
   background: white;
   color: black;
 }
@@ -1405,9 +1416,17 @@ header .logo .mobile-phagraf {
 .contact .contact-social {
   padding: 30px  0;
   position: absolute;
-  top: 155px;
-  right: 15px;
   font-size: 1.8rem;
+  top: 115px;
+  left: 25px;
+  right: auto;
+}
+@media (min-width: 768px) {
+  .contact .contact-social {
+    top: 155px;
+    right: 15px;
+    left: auto;
+  }
 }
 .contact .contact-social a {
   color: black;
