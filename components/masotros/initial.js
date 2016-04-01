@@ -39,7 +39,7 @@ $(window).scroll(function(){
     $('.logo').removeClass('page-play');
     $('.page-nav').removeClass('page-play');
   }
-  
+
   $(selector).each(function(){
     var top = $(this).position().top -90;
     if(scrollTop > top) {
@@ -96,7 +96,50 @@ $(document).ready(function(){
   });
 });
 
+//form
+ $(document).ready(function(){
+   $('#formSubmit').click(function(){
 
+       var html = '<p><span style="font-weight:bold;" >Teléfono:</span><span> ' + $('#formPhone').val() + '</span></p><p><span style="font-weight:bold;" >Mensaje: </span><span>' + $('#formMessage').val()+ '</span></p> ';
+       var json = {
+         'key': 'V0cITqelNFNJmxkzQ26N1g',
+         'message': {
+           'subject': 'Mensaje via web',
+           'html': html,
+           'from_email': $('#formEmail').val(),
+           'from_name': $('#formName').val(),
+           'to': [
+             {
+               'email': 'info@masotros.com',
+               'name': '+Otros',
+               'type': 'to'
+             }
+           ],
+           "global_merge_vars": [
+                     {
+                         "telephone": "TELFONO",
+                         "content": $('#formPhone').val()
+                     },
+                     {
+                         "message": "MENSAJE",
+                         "content": $('#formMessage').val()
+                     },
+           ],
+         }
+       }
+   	$.ajax({
+   		type: "POST",
+   		url: "https://mandrillapp.com/api/1.0/messages/send.json",
+   		data:JSON.stringify(json),
+   		success: function(){
+           location.reload();
+   		},
+         error:function() {
+           console.log("error");
+   	  }
+   	});
+   });
+ });
 
 //---------- Google Maps
 
