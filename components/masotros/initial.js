@@ -102,7 +102,7 @@ $(document).ready(function(){
 
        var html = '<p><span style="font-weight:bold;" >Teléfono:</span><span> ' + $('#formPhone').val() + '</span></p><p><span style="font-weight:bold;" >Mensaje: </span><span>' + $('#formMessage').val()+ '</span></p> ';
        var json = {
-         'key': 'V0cITqelNFNJmxkzQ26N1g',
+         'key': 'btvV0EOS5BcqEiK59AeNQQ',
          'message': {
            'subject': 'Mensaje via web',
            'html': html,
