@@ -764,7 +764,7 @@ header .logo .mobile-phagraf {
 @media (min-width: 768px) {
   .project-info .info-box .box-black {
     padding: 25px;
-    width: auto;
+    width: 50%;
   }
 }
 .project-info .info-box .box-black .sub-title {
@@ -919,7 +919,7 @@ header .logo .mobile-phagraf {
 }
 @media (min-width: 768px) {
   .us .column ul li {
-    min-height: auto;
+    min-height: 0;
   }
 }
 .us .column ul li.ornela {
