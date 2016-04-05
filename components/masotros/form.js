@@ -13,28 +13,4 @@ $("#contactForm").on('submit', function(e) {
 			flag = false;
 		}
 	});
-	if (flag) {
-		$.ajax({
-			type: "POST",
-			url: "https://mandrillapp.com/api/1.0/messages/send.json",
-			data: {
-				'key': 'V0cITqelNFNJmxkzQ26N1g',
-				'message': {
-					'from_email': $('#formEmail').val(),
-					'from_name': $('#formName').val(),
-					'to': [
-						{
-							'email': 'info@masotros.com',
-							'name': '+Otros',
-							'type': 'to'
-						}
-					],
-					"Teléfono: " + $('#formPhone').val() + "<br>" + "Mensaje: " + $('#formMessage').val()
-				}
-			},
-			success: function(){
-				location.reload();
-			}
-		});
-	}
 });
