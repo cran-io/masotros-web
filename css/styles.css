@@ -656,6 +656,186 @@ header .logo .mobile-phagraf {
   -o-animation: image 18s 12s infinite;
   animation: image 18s 12s infinite;
 }
+.flexslider.screen li.four-img img:nth-child(4) {
+  -moz-animation: image 24s 0s infinite;
+  -webkit-animation: image 24s 0s infinite;
+  -o-animation: image 24s 0s infinite;
+  animation: image 24s 0s infinite;
+}
+.flexslider.screen li.four-img img:nth-child(3) {
+  -moz-animation: image 24s 6s infinite;
+  -webkit-animation: image 24s 6s infinite;
+  -o-animation: image 24s 6s infinite;
+  animation: image 24s 6s infinite;
+}
+.flexslider.screen li.four-img img:nth-child(2) {
+  -moz-animation: image 24s 12s infinite;
+  -webkit-animation: image 24s 12s infinite;
+  -o-animation: image 24s 12s infinite;
+  animation: image 24s 12s infinite;
+}
+.flexslider.screen li.four-img img:nth-child(1) {
+  -moz-animation: image 24s 18s infinite;
+  -webkit-animation: image 24s 18s infinite;
+  -o-animation: image 24s 18s infinite;
+  animation: image 24s 18s infinite;
+}
+.flexslider.screen li.five-img img:nth-child(5) {
+  -moz-animation: image 30s 0s infinite;
+  -webkit-animation: image 30s 0s infinite;
+  -o-animation: image 30s 0s infinite;
+  animation: image 30s 0s infinite;
+}
+.flexslider.screen li.five-img img:nth-child(4) {
+  -moz-animation: image 30s 6s infinite;
+  -webkit-animation: image 30s 6s infinite;
+  -o-animation: image 30s 6s infinite;
+  animation: image 30s 6s infinite;
+}
+.flexslider.screen li.five-img img:nth-child(3) {
+  -moz-animation: image 30s 12s infinite;
+  -webkit-animation: image 30s 12s infinite;
+  -o-animation: image 30s 12s infinite;
+  animation: image 30s 12s infinite;
+}
+.flexslider.screen li.five-img img:nth-child(2) {
+  -moz-animation: image 30s 18s infinite;
+  -webkit-animation: image 30s 18s infinite;
+  -o-animation: image 30s 18s infinite;
+  animation: image 30s 18s infinite;
+}
+.flexslider.screen li.five-img img:nth-child(1) {
+  -moz-animation: image 30s 24s infinite;
+  -webkit-animation: image 30s 24s infinite;
+  -o-animation: image 30s 24s infinite;
+  animation: image 30s 24s infinite;
+}
+.flexslider.screen li.six-img img:nth-child(6) {
+  -moz-animation: image 36s 0s infinite;
+  -webkit-animation: image 36s 0s infinite;
+  -o-animation: image 36s 0s infinite;
+  animation: image 36s 0s infinite;
+}
+.flexslider.screen li.six-img img:nth-child(5) {
+  -moz-animation: image 36s 6s infinite;
+  -webkit-animation: image 36s 6s infinite;
+  -o-animation: image 36s 6s infinite;
+  animation: image 36s 6s infinite;
+}
+.flexslider.screen li.six-img img:nth-child(4) {
+  -moz-animation: image 36s 12s infinite;
+  -webkit-animation: image 30s 12s infinite;
+  -o-animation: image 36s 12s infinite;
+  animation: image 36s 12s infinite;
+}
+.flexslider.screen li.six-img img:nth-child(3) {
+  -moz-animation: image 36s 18s infinite;
+  -webkit-animation: image 36s 18s infinite;
+  -o-animation: image 36s 18s infinite;
+  animation: image 36s 18s infinite;
+}
+.flexslider.screen li.six-img img:nth-child(2) {
+  -moz-animation: image 36s 24s infinite;
+  -webkit-animation: image 36s 24s infinite;
+  -o-animation: image 36s 24s infinite;
+  animation: image 36s 24s infinite;
+}
+.flexslider.screen li.six-img img:nth-child(1) {
+  -moz-animation: image 36s 30s infinite;
+  -webkit-animation: image 36s 30s infinite;
+  -o-animation: image 36s 30s infinite;
+  animation: image 36s 30s infinite;
+}
+.flexslider.screen li.seven-img img:nth-child(7) {
+  -moz-animation: image 42s 0s infinite;
+  -webkit-animation: image 42s 0s infinite;
+  -o-animation: image 42s 0s infinite;
+  animation: image 42s 0s infinite;
+}
+.flexslider.screen li.seven-img img:nth-child(6) {
+  -moz-animation: image 42s 6s infinite;
+  -webkit-animation: image 42s 6s infinite;
+  -o-animation: image 42s 6s infinite;
+  animation: image 42s 6s infinite;
+}
+.flexslider.screen li.seven-img img:nth-child(5) {
+  -moz-animation: image 42s 12s infinite;
+  -webkit-animation: image 42s 12s infinite;
+  -o-animation: image 42s 12s infinite;
+  animation: image 42s 12s infinite;
+}
+.flexslider.screen li.seven-img img:nth-child(4) {
+  -moz-animation: image 42s 18s infinite;
+  -webkit-animation: image 42s 18s infinite;
+  -o-animation: image 42s 18s infinite;
+  animation: image 42s 18s infinite;
+}
+.flexslider.screen li.seven-img img:nth-child(3) {
+  -moz-animation: image 42s 24s infinite;
+  -webkit-animation: image 42s 24s infinite;
+  -o-animation: image 42s 24s infinite;
+  animation: image 42s 24s infinite;
+}
+.flexslider.screen li.seven-img img:nth-child(2) {
+  -moz-animation: image 42s 30s infinite;
+  -webkit-animation: image 42s 30s infinite;
+  -o-animation: image 42s 30s infinite;
+  animation: image 42s 30s infinite;
+}
+.flexslider.screen li.seven-img img:nth-child(1) {
+  -moz-animation: image 42s 36s infinite;
+  -webkit-animation: image 42s 36s infinite;
+  -o-animation: image 42s 36s infinite;
+  animation: image 42s 36s infinite;
+}
+.flexslider.screen li.eight-img img:nth-child(8) {
+  -moz-animation: image 48s 0s infinite;
+  -webkit-animation: image 48s 0s infinite;
+  -o-animation: image 48s 0s infinite;
+  animation: image 48s 0s infinite;
+}
+.flexslider.screen li.eight-img img:nth-child(7) {
+  -moz-animation: image 48s 6s infinite;
+  -webkit-animation: image 48s 6s infinite;
+  -o-animation: image 48s 6s infinite;
+  animation: image 48s 6s infinite;
+}
+.flexslider.screen li.eight-img img:nth-child(6) {
+  -moz-animation: image 48s 12s infinite;
+  -webkit-animation: image 48s 12s infinite;
+  -o-animation: image 48s 12s infinite;
+  animation: image 48s 12s infinite;
+}
+.flexslider.screen li.eight-img img:nth-child(5) {
+  -moz-animation: image 48s 18s infinite;
+  -webkit-animation: image 48s 18s infinite;
+  -o-animation: image 48s 18s infinite;
+  animation: image 48s 18s infinite;
+}
+.flexslider.screen li.eight-img img:nth-child(4) {
+  -moz-animation: image 48s 24s infinite;
+  -webkit-animation: image 48s 24s infinite;
+  -o-animation: image 48s 24s infinite;
+  animation: image 48s 24s infinite;
+}
+.flexslider.screen li.eight-img img:nth-child(3) {
+  -moz-animation: image 48s 30s infinite;
+  -webkit-animation: image 48s 30s infinite;
+  -o-animation: image 48s 30s infinite;
+  animation: image 48s 30s infinite;
+}
+.flexslider.screen li.eight-img img:nth-child(2) {
+  -moz-animation: image 48s 36s infinite;
+  -webkit-animation: image 48s 36s infinite;
+  -o-animation: image 48s 36s infinite;
+  animation: image 48s 36s infinite;
+}
+.flexslider.screen li.eight-img img:nth-child(1) {
+  -moz-animation: image 48s 42s infinite;
+  -webkit-animation: image 48s 42s infinite;
+  -o-animation: image 48s 42s infinite;
+  animation: image 48s 42s infinite;
+}
 .flexslider.screen li img {
   transform: translateX(-50%);
   margin-left: 50%;

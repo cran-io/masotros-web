@@ -89,6 +89,21 @@ $(document).ready(function(){
       case 3:
       $(this).addClass('three-img');
       break;
+      case 4:
+      $(this).addClass('four-img');
+      break;
+      case 5:
+      $(this).addClass('five-img');
+      break;
+      case 6:
+      $(this).addClass('six-img');
+      break;
+      case 7:
+      $(this).addClass('seven-img');
+      break;
+      case 8:
+      $(this).addClass('eight-img');
+      break;
       default:
       break;
     }
