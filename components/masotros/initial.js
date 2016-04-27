@@ -156,6 +156,13 @@ $(document).ready(function(){
    });
  });
 
+
+// --------- aLoad
+
+window.onload = function () {
+  aload();
+};
+
 //---------- Google Maps
 
 // function initialize() {

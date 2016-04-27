@@ -724,7 +724,7 @@ header .logo .mobile-phagraf {
 }
 .flexslider.screen li.six-img img:nth-child(4) {
   -moz-animation: image 36s 12s infinite;
-  -webkit-animation: image 30s 12s infinite;
+  -webkit-animation: image 36s 12s infinite;
   -o-animation: image 36s 12s infinite;
   animation: image 36s 12s infinite;
 }
@@ -1178,7 +1178,7 @@ header .logo .mobile-phagraf {
 }
 @media (min-width: 768px) {
   .us .column ul li.martin .info-person {
-    min-height: 40vh;
+    min-height: 30vh;
   }
 }
 .us .column ul li.nehuel {
@@ -1190,10 +1190,10 @@ header .logo .mobile-phagraf {
 }
 @media (min-width: 768px) {
   .us .column ul li.nehuel .info-person {
-    min-height: 40vh;
+    min-height: 30vh;
   }
 }
-/*.us .column ul li.belen {
+.us .column ul li.belen {
   background: transparent url(../images/us/06.jpg) no-repeat right top;
   background-size: cover;
 }
@@ -1204,10 +1204,10 @@ header .logo .mobile-phagraf {
   .us .column ul li.belen .info-person {
     min-height: 25vh;
   }
-}*/
+}
 .us .column ul li.grey-light-third {
   display: none;
-  height: 20vh;
+  height: 15vh;
   background: #e7e6e7;
 }
 @media (min-width: 768px) {
