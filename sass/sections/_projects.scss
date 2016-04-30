@@ -248,6 +248,11 @@
 		text-transform: uppercase;
 		@include transition(opacity $timing);
 
+		h3 {
+			font-size: map-get($font-size, high);
+			line-height: 1.2em;
+		}
+
 		.icon-miselanius {
 			color: white;
 			position: absolute;
@@ -268,10 +273,29 @@
 	a {
 
 		&:before {
-			font-size: 22px;
+			font-size: 36px;
 			margin-top: 10px;
 			color: white;
-			text-shadow: none;
+			text-shadow: 0 0 4px rgba( 0, 0, 0, 0.8);
+		}
+	}
+}
+
+.flexslider{
+
+	&:hover {
+
+		.flex-direction-nav {
+
+			.flex-prev {
+			    opacity: 0.7;
+			    left: 20px;
+			}
+
+			.flex-next {
+			    opacity: 0.7;
+			    right: 20px;
+			}
 		}
 	}
 }

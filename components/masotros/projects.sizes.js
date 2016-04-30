@@ -28,15 +28,12 @@ $(window).load(function(){
 });
 
 function resizeProyectImage(){
-	if(window.innerHeight >= $('.screen li img').innerHeight())
-	{
-		console.log('Hello Height');
-		$('.screen li img').css({'width':'auto', 'height': '100vh'});
-	}
 	if(window.innerWidth >= $('.screen li img').innerWidth()) {
-		console.log('Hello width');
 		$('.screen li img').css({'width':'100vw', 'height': 'auto'});
 	} 
+	if(window.innerHeight >= $('.screen li img').innerHeight())	{
+		$('.screen li img').css({'width':'auto', 'height': '100vh'});
+	}
 };
 
 $(window).on('resize', resizeProyectImage);

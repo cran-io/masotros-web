@@ -22,7 +22,6 @@
 	&:after {
 		clear: both;
 	}
-	clear: both;
 }
 
 @mixin vertical-align {
@@ -51,7 +50,7 @@
 }
 
 @mixin breakpoint ($point, $value:0) {
-	
+
 	@if $point == "tablet" {
 		@media (min-width:768px) { @content; }
 	}
@@ -61,22 +60,19 @@
 	}
 
 	@else {
-		@media ($point == $value) { @content }
+		@meadia ($point == $value) { @content }
 	}
 }
 
 @mixin grid ($cols, $gutter:0, $childs: ".item") {
+	width: auto;
 	margin-right: -$gutter;
 
 	#{$childs} {
 		float: left;
-		padding-left: $gutter;
-		width: 100%;
+		width: (100%/$cols);
+		padding-right: $gutter;
 		background-clip: content-box;
-
-		@include breakpoint(tablet) {
-			width: (100%/$cols);
-		}
 	}
 }
 
@@ -125,4 +121,29 @@
 		width: $blocks-width-size * 2;
 		height: $blocks-height-size * 2;
 	}
+}
+
+@mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white){
+  overflow: hidden;
+  position: relative;
+  line-height: $lineHeight;
+  max-height: $lineHeight * $lineCount; 
+  text-align: justify;
+  margin-right: -1em;
+  padding-right: 1em;
+  &:before {
+    content: '...';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: $bgColor;
+  }
 }

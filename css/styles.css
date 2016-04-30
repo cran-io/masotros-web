@@ -353,7 +353,6 @@ section {
   max-width: 96%;
   margin: 0 auto;
   position: relative;
-  clear: both;
 }
 .content-wrapper:before, .content-wrapper:after {
   content: " ";
@@ -457,7 +456,6 @@ header .logo .mobile-phagraf {
 }
 .page-nav .nav-buttons li {
   margin: 5px 0;
-  clear: both;
 }
 .page-nav .nav-buttons li:before, .page-nav .nav-buttons li:after {
   content: " ";
@@ -592,7 +590,6 @@ header .logo .mobile-phagraf {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  clear: both;
 }
 .projects:before, .projects:after {
   content: " ";
@@ -878,6 +875,10 @@ header .logo .mobile-phagraf {
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
+.flexslider .project-info-thumb h3 {
+  font-size: 1.2rem;
+  line-height: 1.2em;
+}
 .flexslider .project-info-thumb .icon-miselanius {
   color: white;
   position: absolute;
@@ -891,10 +892,19 @@ header .logo .mobile-phagraf {
 }
 
 .flex-direction-nav a:before {
-  font-size: 22px;
+  font-size: 36px;
   margin-top: 10px;
   color: white;
-  text-shadow: none;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+}
+
+.flexslider:hover .flex-direction-nav .flex-prev {
+  opacity: 0.7;
+  left: 20px;
+}
+.flexslider:hover .flex-direction-nav .flex-next {
+  opacity: 0.7;
+  right: 20px;
 }
 
 .project-info {
@@ -915,6 +925,7 @@ header .logo .mobile-phagraf {
 .project-info .info-box {
   opacity: 1;
   margin-top: 10px;
+  width: auto;
   margin-right: -15px;
   -moz-transition: opacity 0.3s ease-in-out, margin 0.3s ease-in-out;
   -webkit-transition: opacity 0.3s ease-in-out, margin 0.3s ease-in-out;
@@ -922,14 +933,9 @@ header .logo .mobile-phagraf {
 }
 .project-info .info-box .column {
   float: left;
-  padding-left: 15px;
-  width: 100%;
+  width: 50%;
+  padding-right: 15px;
   background-clip: content-box;
-}
-@media (min-width: 768px) {
-  .project-info .info-box .column {
-    width: 50%;
-  }
 }
 @media (min-width: 768px) {
   .project-info .info-box {
@@ -1037,7 +1043,6 @@ header .logo .mobile-phagraf {
   min-height: 100vh;
   background: white;
   position: relative;
-  clear: both;
 }
 .us:before, .us:after {
   content: " ";
@@ -1103,7 +1108,7 @@ header .logo .mobile-phagraf {
   }
 }
 .us .column ul li.ornela {
-  background: transparent url(../images/us/01.jpg) no-repeat right top;
+  background: transparent url(../images/us/01.jpg) no-repeat center top;
   background-size: cover;
 }
 .us .column ul li.ornela .info-person {
@@ -1170,7 +1175,7 @@ header .logo .mobile-phagraf {
   }
 }
 .us .column ul li.martin {
-  background: transparent url(../images/us/04.jpg) no-repeat right top;
+  background: transparent url(../images/us/04.jpg) no-repeat center top;
   background-size: cover;
 }
 .us .column ul li.martin .info-person {
@@ -1182,7 +1187,7 @@ header .logo .mobile-phagraf {
   }
 }
 .us .column ul li.nehuel {
-  background: transparent url(../images/us/05.jpg) no-repeat left top;
+  background: transparent url(../images/us/05.jpg) no-repeat center top;
   background-size: cover;
 }
 .us .column ul li.nehuel .info-person {
@@ -1194,7 +1199,7 @@ header .logo .mobile-phagraf {
   }
 }
 .us .column ul li.belen {
-  background: transparent url(../images/us/06.jpg) no-repeat right top;
+  background: transparent url(../images/us/06.jpg) no-repeat center top;
   background-size: cover;
 }
 .us .column ul li.belen .info-person {
@@ -1337,9 +1342,6 @@ header .logo .mobile-phagraf {
   left: 0;
   text-align: right;
 }
-.contact .line-first, .contact .line-second, .contact .line-third {
-  clear: both;
-}
 .contact .line-first:before, .contact .line-first:after, .contact .line-second:before, .contact .line-second:after, .contact .line-third:before, .contact .line-third:after {
   content: " ";
   display: table;
@@ -1450,7 +1452,7 @@ header .logo .mobile-phagraf {
 .contact .contact-form .columns {
   width: 100%;
   position: relative;
-  clear: both;
+  width: auto;
   margin-right: -5px;
 }
 .contact .contact-form .columns:before, .contact .contact-form .columns:after {
@@ -1462,14 +1464,9 @@ header .logo .mobile-phagraf {
 }
 .contact .contact-form .columns .column {
   float: left;
-  padding-left: 5px;
-  width: 100%;
+  width: 50%;
+  padding-right: 5px;
   background-clip: content-box;
-}
-@media (min-width: 768px) {
-  .contact .contact-form .columns .column {
-    width: 50%;
-  }
 }
 .contact .contact-form .columns input, .contact .contact-form .columns textarea {
   font-family: "mas-regular", Helvetica, Arial, sans-serif;
