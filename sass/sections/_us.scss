@@ -4,7 +4,7 @@
 	background: white;
 	position: relative;
 	@include clearfix;
-	
+
 	
 	.us-title-mobile {
 			display: block;
@@ -17,7 +17,6 @@
 	.mobile-miselanius {
 		top: 112px;
 	}
-
 
 	.column {
 		float: none;
@@ -101,7 +100,11 @@
 					background: black;
 					padding: 25px;
 					display: none;
-					min-height: 28vh;
+					min-height: 43vh;
+
+					img {
+						width: 85px;
+					}
 
 					@include breakpoint(tablet) {
 						display: block;
@@ -119,7 +122,7 @@
 
 
 				&.alan {
-					background: transparent url(../images/us/03.jpg) no-repeat center top;
+					background: transparent url(../images/us/03.jpg) no-repeat right top;
 					background-size: cover;
 					
 					.info-person {
@@ -127,14 +130,14 @@
 
 						@include breakpoint(tablet) {
 							display: block;
-							min-height: 25vh;
+							min-height: 32vh;
 						}
 					}
 				}
 
 				&.grey-black-second {
 					display: none;
-	    			height: 32vh;
+	    			height: 25vh;
 	    			background: $grey-dark;
 
 	    			@include breakpoint(tablet) {
@@ -156,7 +159,7 @@
 				}
 
 				&.nehuel {
-					background: transparent url(../images/us/05.jpg) no-repeat center top;
+					background: transparent url(../images/us/05.jpg) no-repeat left top;
 					background-size: cover;
 
 					.info-person {
@@ -200,14 +203,14 @@
 						min-height: auto;
 
 	    				@include breakpoint(tablet) {
-							min-height: 15vh;
+							min-height: 38vh;
 	    				}
 					}
 				}
 
 				&.grey-dark-fourth {
 					display: none;
-	    			height: 55vh;
+	    			height: 25vh;
 	    			background: $grey-dark;
 
 	    			@include breakpoint(tablet) {
@@ -254,7 +257,11 @@
 					color: black;
 					bottom: 10px;
 					right: 50px;
-					min-height: 15vh;
+					min-height: 22vh;
+
+					p {
+						font-size: 0.9rem;
+					}
 				}
 			}
 		}
@@ -295,8 +302,12 @@
 
 	.us-inovation {
 		padding: 25px;
-		font-size: map-get($font-size, medium);
+		font-size: map-get($font-size, high);
 		min-height: 15vh;
+
+		@include breakpoint(desktop) {
+			font-size: map-get($font-size, medium);
+		}
 	}
 }
 
