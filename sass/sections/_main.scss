@@ -1,5 +1,4 @@
 .main {
-	background: url("../images/bg-main.jpg");
 	background-size: cover;
 	height: 100vh;
 	width: 100vw;
@@ -9,6 +8,7 @@
 		@include vertical-align;
 		top: 165px;
 		margin-left:10px;
+		z-index: 2;
 
 		@include breakpoint(tablet) {
 			top: 50%;
@@ -18,6 +18,10 @@
 
 	.mobile-miselanius {
 	    @include transform(rotate(90deg));
+	    top: 15px;
+	    left: 15px;
+	    font-size: 100px;
+		z-index: 2;
 	}
 
 	.mobile-cross {
@@ -25,6 +29,8 @@
 		display: block;
 		margin-top:10px;
 		font-size: 32px;
+		z-index: 2;
+		position: relative;
 	    @include transform(rotate(45deg));
 		
 		@include breakpoint(tablet) {
@@ -36,6 +42,7 @@
 		font-size: map-get($font-size, big);
 		bottom: 25px;
 		text-align: center;
+		z-index: 2;
 		@include horizontal-align;
 		@include animation(jump 1s ease-in-out 0s infinite alternate);
 		
@@ -45,6 +52,60 @@
 			@include breakpoint(tablet) {
 				display: none;
 			}	
+		}
+	}
+
+	.background-video {
+		height: 100vh;
+		width: 100%;
+		top: 0;
+		@include horizontal-align;
+
+		.video {
+			-webkit-backface-visibility: hidden;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-ms-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			width: 100%;
+		    height: 100%;
+			z-index: 1;
+			position: relative;
+			overflow: hidden;
+			background: black;
+
+			.grid {
+				height: 100%;
+				width: 100%;
+				background: url('../images/grid.png');
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				left: 0;
+			}
+
+			video {
+			    display: block;
+			    position: absolute;
+			    top: 0px;
+			    right: auto;
+			    min-width: 100%;
+			    min-height: 100%;
+			    width: 100%;
+			    height: auto;
+			    z-index: -100;
+				pointer-events: none;
+				overflow-y: hidden;
+				vertical-align: top;
+				@include transition(opacity .5s ease-in-out);
+				@include horizontal-align;
+			}
 		}
 	}
 }

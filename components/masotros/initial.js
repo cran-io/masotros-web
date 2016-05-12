@@ -164,6 +164,31 @@ window.onload = function () {
   aload();
 };
 
+// Video
+
+$(window).load(function() { 
+
+    if(window.innerHeight >= $('.hero-video').innerHeight())  {
+        $('.hero-video').css({'width':'auto', 'height': '100%'});
+    }
+
+    if(window.innerWidth >= $('.hero-video').innerWidth()) {
+        $('.hero-video').css({'width':'100%', 'height': 'auto'});
+    }
+
+});
+
+
+$(window).on('resize', function(){
+      if(window.innerHeight >= $('.hero-video').innerHeight()) {
+        $('.hero-video').css({'width':'auto', 'height': '100%'});
+    }
+
+    if(window.innerWidth >= $('.hero-video').innerWidth()) {
+        $('.hero-video').css({'width':'100%', 'height': 'auto'});
+    } 
+});
+
 //---------- Google Maps
 
 // function initialize() {
