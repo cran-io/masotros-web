@@ -78,7 +78,8 @@ $(function() {
 $(document).ready(function(){
 
   $('.screen .slides li').each( function(index){
-    var count = $(this).find('img').length;
+    var count = $(this).find('.slide-img').length;
+    console.log(count);
 
     switch(count) {
       case 1:
@@ -157,13 +158,6 @@ $(document).ready(function(){
  });
 
 
-
-// --------- aLoad
-
-window.onload = function () {
-  aload();
-};
-
 // Video
 
 $(window).load(function() { 
@@ -188,6 +182,18 @@ $(window).on('resize', function(){
         $('.hero-video').css({'width':'100%', 'height': 'auto'});
     } 
 });
+
+
+// --------- aLoad
+
+window.onload = function () {
+  aload();
+};
+
+$(window).load(function() {
+    $(".overlay").fadeOut(500);
+});
+
 
 //---------- Google Maps
 

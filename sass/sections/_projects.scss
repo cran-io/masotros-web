@@ -1,4 +1,5 @@
 @import url(../components/flexslider/flexslider.css);
+[data-aload] { background-image: none !important; }
 
 .projects {
 	height: 100vh;
@@ -42,171 +43,174 @@
 
 			&.two-img {
 
-				img:nth-child(2){
+				.slide-img:nth-child(2){
 					@include animation(image 12s 0s infinite);
 				}
 
-				img:nth-child(1){
+				.slide-img:nth-child(1){
 					@include animation(image 12s 6s infinite);
 				}
 			}
 
 			&.three-img {
 
-				img:nth-child(3){
+				.slide-img:nth-child(3){
 					@include animation(image 18s 0s infinite);
 				}
 
-				img:nth-child(2){
+				.slide-img:nth-child(2){
 					@include animation(image 18s 6s infinite);
 				}
 
-				img:nth-child(1){
+				.slide-img:nth-child(1){
 					@include animation(image 18s 12s infinite);
 				}
 			}
 
 			&.four-img {
 
-				img:nth-child(4){
+				.slide-img:nth-child(4){
 					@include animation(image 24s 0s infinite);
 				}
 
-				img:nth-child(3){
+				.slide-img:nth-child(3){
 					@include animation(image 24s 6s infinite);
 				}
 
-				img:nth-child(2){
+				.slide-img:nth-child(2){
 					@include animation(image 24s 12s infinite);
 				}
 
-				img:nth-child(1){
+				.slide-img:nth-child(1){
 					@include animation(image 24s 18s infinite);
 				}
 			}
 
 			&.five-img {
 
-				img:nth-child(5){
+				.slide-img:nth-child(5){
 					@include animation(image 30s 0s infinite);
 				}
 
-				img:nth-child(4){
+				.slide-img:nth-child(4){
 					@include animation(image 30s 6s infinite);
 				}
 
-				img:nth-child(3){
+				.slide-img:nth-child(3){
 					@include animation(image 30s 12s infinite);
 				}
 
-				img:nth-child(2){
+				.slide-img:nth-child(2){
 					@include animation(image 30s 18s infinite);
 				}
 
-				img:nth-child(1){
+				.slide-img:nth-child(1){
 					@include animation(image 30s 24s infinite);
 				}
 			}
 
 			&.six-img {
 
-				img:nth-child(6){
+				.slide-img:nth-child(6){
 					@include animation(image 36s 0s infinite);
 				}
 
-				img:nth-child(5){
+				.slide-img:nth-child(5){
 					@include animation(image 36s 6s infinite);
 				}
 
-				img:nth-child(4){
+				.slide-img:nth-child(4){
 					@include animation(image 36s 12s infinite);
 				}
 
-				img:nth-child(3){
+				.slide-img:nth-child(3){
 					@include animation(image 36s 18s infinite);
 				}
 
-				img:nth-child(2){
+				.slide-img:nth-child(2){
 					@include animation(image 36s 24s infinite);
 				}
 
-				img:nth-child(1){
+				.slide-img:nth-child(1){
 					@include animation(image 36s 30s infinite);
 				}
 			}
 
 			&.seven-img {
 
-				img:nth-child(7){
+				.slide-img:nth-child(7){
 					@include animation(image 42s 0s infinite);
 				}
 
-				img:nth-child(6){
+				.slide-img:nth-child(6){
 					@include animation(image 42s 6s infinite);
 				}
 
-				img:nth-child(5){
+				.slide-img:nth-child(5){
 					@include animation(image 42s 12s infinite);
 				}
 
-				img:nth-child(4){
+				.slide-img:nth-child(4){
 					@include animation(image 42s 18s infinite);
 				}
 
-				img:nth-child(3){
+				.slide-img:nth-child(3){
 					@include animation(image 42s 24s infinite);
 				}
 
-				img:nth-child(2){
+				.slide-img:nth-child(2){
 					@include animation(image 42s 30s infinite);
 				}
 
-				img:nth-child(1){
+				.slide-img:nth-child(1){
 					@include animation(image 42s 36s infinite);
 				}
 			}
 
 			&.eight-img {
 
-				img:nth-child(8){
+				.slide-img:nth-child(8){
 					@include animation(image 48s 0s infinite);
 				}
 
-				img:nth-child(7){
+				.slide-img:nth-child(7){
 					@include animation(image 48s 6s infinite);
 				}
 
-				img:nth-child(6){
+				.slide-img:nth-child(6){
 					@include animation(image 48s 12s infinite);
 				}
 
-				img:nth-child(5){
+				.slide-img:nth-child(5){
 					@include animation(image 48s 18s infinite);
 				}
 
-				img:nth-child(4){
+				.slide-img:nth-child(4){
 					@include animation(image 48s 24s infinite);
 				}
 
-				img:nth-child(3){
+				.slide-img:nth-child(3){
 					@include animation(image 48s 30s infinite);
 				}
 
-				img:nth-child(2){
+				.slide-img:nth-child(2){
 					@include animation(image 48s 36s infinite);
 				}
 
-				img:nth-child(1){
+				.slide-img:nth-child(1){
 					@include animation(image 48s 42s infinite);
 				}
 			}
 
-			img {
-				transform: translateX(-50%);
-				margin-left: 50%;
+			.slide-img {
 				position: absolute;
-				top: 0;
-				left: 0;
+			    top: 0;
+			    left: 0;
+			    background-size: cover;
+			    background-position: center;
+			    height: 100vh;
+			    width: 100vw;
+			    -webkit-backface-visibility:   hidden;
 			}
 		}
 	}
@@ -346,6 +350,10 @@
 		
 		@include breakpoint(tablet) {
 			opacity: 0;
+		}
+
+		.column {
+			padding: 0 0 0 15px;
 		}
 
 		.box-black {

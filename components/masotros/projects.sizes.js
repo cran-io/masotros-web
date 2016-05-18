@@ -27,21 +27,5 @@ $(window).load(function(){
 	});
 });
 
-function resizeProyectImage(){
-	if(window.innerWidth >= $('.screen li img').innerWidth()) {
-		$('.screen li img').css({'width':'100vw', 'height': 'auto'});
-	} 
-	if($('.screen li').innerHeight() >= $('.screen li img').innerHeight())	{
-		$('.screen li img').css({'width':'auto', 'height': '100vh'});
-	}
-};
-
-$(window).on('resize', resizeProyectImage);
-
-$(window).load(function() {
-    $(".overlay").fadeOut(500,function(){
-        resizeProyectImage();
-    });
-});
 
 
