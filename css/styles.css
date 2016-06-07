@@ -1623,7 +1623,7 @@ header .logo .mobile-phagraf {
   position: absolute;
   border: none;
   bottom: 18px;
-  right: 5px;
+  right: 20px;
   padding: 8px 15px;
   cursor: pointer;
   -moz-transition: background 0.3s ease-in-out;
