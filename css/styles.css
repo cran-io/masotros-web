@@ -529,9 +529,9 @@ header .logo .mobile-phagraf {
 .main .main-copy {
   position: absolute;
   top: 80%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-80%);
+  -moz-transform: translateY(-80%);
+  transform: translateY(-80%);
   top: 165px;
   margin-left: 10px;
   z-index: 2;
